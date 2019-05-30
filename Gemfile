@@ -96,3 +96,4 @@ group :coverage do
 end
 
 gem 'coveralls', require: false
+
