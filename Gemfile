@@ -97,3 +97,5 @@ end
 
 gem 'coveralls', require: false
 
+gem 'cucumber'
+

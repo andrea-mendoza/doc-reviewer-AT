@@ -14,7 +14,7 @@ script:
   - bin/rake db:migrate
   - bin/rake db:seed
   - bin/rake test
-  - cucumber
+  - bundle exec cucumber
 
 definitions:
   caches:
