@@ -70,3 +70,27 @@ Scenario: Editar email del usuario
   And Ingresar "carolina@gmail.com" en el campo Correo Electronico
   And Presiono el boton "Editar"
   Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
+
+
+Scenario: Editar telefono del usuario con datos invalidos   
+  Given Visito la pagina principal
+  And Ingresar "carito" como usuario
+  And Ingresar "carito123" como contraseña
+  And presiono el boton "Ingresar" 
+  When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Andrea Villalobos Montaño"
+  And presiono la opcion "Modificar mis datos"
+  And Ingresar 12312731242 en el campo telefono
+  And Presiono el boton "Editar"
+  Then El sistema muestra el mensaje "El numero de telefono debe tener hasta 8 digitos"
+
+
+Scenario: Editar telefono del usuario con datos invalidos   
+  Given Visito la pagina principal
+  And Ingresar "carito" como usuario
+  And Ingresar "carito123" como contraseña
+  And presiono el boton "Ingresar" 
+  When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Andrea Villalobos Montaño"
+  And presiono la opcion "Modificar mis datos"
+  And Ingresar 12312731242 en el campo telefono
+  And Presiono el boton "Editar"
+  Then El sistema muestra el mensaje "El numero de telefono debe tener hasta 8 digitos"

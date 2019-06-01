@@ -54,4 +54,21 @@ When("Ingreso {string} en el campo Correo Electronico") do |email|
   Then("El sistema muestra una alerta {string}") do |alerta|
     page.has_content?(alerta)
   end
+
+  When("Ingresar {int} en el campo ci") do |int|
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  Then("El sistema muestra una alerta {string}") do |alerta|
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  When("Ingresar {string} en el campo Apellido") do |apellido|
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  When("Ingresar {int} en el campo telefono") do |telefono|
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
   
