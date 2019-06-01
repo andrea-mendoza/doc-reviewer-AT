@@ -20,7 +20,7 @@ Then(/^I see that the UCB is located at "([^"]*)" street$/) do |adUCB|
   address = find(:xpath, '//*[@id="rhs_block"]/div/div[1]/div/div[1]/div[2]/div[2]/div/div[2]/div/div/span[2]')
   if address.text != adUCB
     	raise "UCB address should be"+adUCB	
-    end
+  end
 end
 
 

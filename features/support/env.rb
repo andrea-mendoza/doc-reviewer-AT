@@ -12,8 +12,7 @@ ENV['PSW']="ILoveQA"
 Capybara.default_driver = :selenium
 
 # Set the host the Capybara tests should be run against
-Capybara.app_host = ENV["CAPYBARA_HOST"]
-Capybara.server_port = 9515
+  Capybara.app_host = ENV["CAPYBARA_HOST"]
 
 # Set the time (in seconds) Capybara should wait for elements to appear on the page
 Capybara.default_max_wait_time = 15
@@ -28,6 +27,8 @@ class CapybaraDriverRegistrar
     end
   end
 end
+
+Capybara.server_host = '0.0.0.0'
 # Register various Selenium drivers
 #CapybaraDriverRegistrar.register_selenium_driver(:internet_explorer)
 #CapybaraDriverRegistrar.register_selenium_driver(:firefox)
