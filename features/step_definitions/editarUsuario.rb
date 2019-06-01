@@ -37,3 +37,12 @@ end
 Then("El sistema muestra el mensaje {string}") do |mensaje|
     page.has_content?(mensaje)
 end
+
+
+# Then("Se cambia el nombre de la parte superior po {string}") do |nombre|
+#     page.has_content?(nombre)
+# end
+
+Then("Se cambia el nombre de la parte superior por {string}") do |nombre|
+    page.has_content?(nombre)
+end
