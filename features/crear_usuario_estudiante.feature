@@ -13,13 +13,12 @@ Feature: Crear cuenta de usuario
     And ingreso mi correo electronico "<correo>"
     And ingreso mi password "<password>"
     And ingreso mi confirmacion para mi password "<password_confirm>"
-	And presiono el boton Registrarse
-	Then soy redirigido a la pagina de Mis documentos
-    And veo mi "<nombre> " "<apellido>" en la pantalla
+	# And presiono el boton "Registrarse"
+	# Then veo mi nombre "<nombre> " "<apellido>" en la pantalla
 
     Examples:
    | nombre  |  apellido      |  username   |   ci  |  celular      |  carrera   |  correo  |  password      |  password_confirm   |
-   | Daniela  |  Vela      |  danivo   |   28910289  |  78909876      |  Sistemas   |  danita@gmail.com  |  danivo123      |  danivo123   |
+   | Daniela  |  Vela      |  dani  |   28910289  |  78909876      |  Ingeniería de Sistemas   |  danita@gmail.com  |  danivo123      |  danivo123   |
 
   Scenario Outline: Campos en blanco
     Given yo estoy en la pagina de registro        
@@ -32,12 +31,18 @@ Feature: Crear cuenta de usuario
     And ingreso mi correo electronico "<correo>"
     And ingreso mi password "<password>"
     And ingreso mi confirmacion para mi password "<password_confirm>"
-	And presiono el boton Registrarse
-	Then veo el mensaje "<mensaje>" 
+	And presiono el boton "Registrarse"
+	Then veo el mensaje "El nombre no puede estar vacío" 
+	And veo el mensaje "Los apellidos no pueden estar vacíos" 
+	And veo el mensaje "El nombre de usuario no puede estar vacío" 
+	And veo el mensaje "Debe elegir una carrera" 
+	And veo el mensaje "Ingrese su contraseña" 
+	And veo el mensaje "Repita su contraseña" 
+
 
     Examples:
-   | nombre  |  apellido      |  username   |   ci  |  celular      |  carrera   |  correo  |  password      |  password_confirm   |    mensaje |
-   |    |        |     |     |        |     |    |        |     |   Campos vacios   |
+   | nombre  |  apellido      |  username   |   ci  |  celular      |  carrera   |  correo  |  password      |  password_confirm   |
+   |    |        |     |     |        |     |    |        |       |
 
  Scenario Outline: Correo usado previamente
     Given yo estoy en la pagina de registro        
@@ -50,13 +55,12 @@ Feature: Crear cuenta de usuario
     And ingreso mi correo electronico "<correo>"
     And ingreso mi password "<password>"
     And ingreso mi confirmacion para mi password "<password_confirm>"
-	And presiono el boton Registrarse
-	Then veo el mensaje "<mensaje>" 
-
+	And presiono el boton "Registrarse"
+	Then veo el mensaje "Correo ya registrado" 
 
     Examples:
-   | nombre  |  apellido      |  username   |   ci  |  celular      |  carrera   |  correo  |  password      |  password_confirm   |    mensaje |
-   | Julia  |  Gutierrez      |  julia1   |   28910289  |  78909876      |  Sistemas   |  julia@gmail.com  |  julia123      |  julia123   | Correo ya usado |
+   | nombre  |  apellido      |  username   |   ci  |  celular      |  carrera   |  correo  |  password      |  password_confirm   |   
+   | Julia  |  Gutierrez      |  julia1   |   28910289  |  78909876      |  Sistemas   |  juli@gmail.com  |  julia123      |  julia123   | 
 
 Scenario Outline: Numero de celular con mas de 8 digitos
     Given yo estoy en la pagina de registro        
@@ -69,9 +73,8 @@ Scenario Outline: Numero de celular con mas de 8 digitos
     And ingreso mi correo electronico "<correo>"
     And ingreso mi password "<password>"
     And ingreso mi confirmacion para mi password "<password_confirm>"
-	And presiono el boton Registrarse
-	Then veo el mensaje "<mensaje>" 
-
+	And presiono el boton "Registrarse"
+	Then veo el mensaje "El celular no puede tener más de 8 caracteres" 
 
     Examples:
    | nombre  |  apellido      |  username   |   ci  |  celular      |  carrera   |  correo  |  password      |  password_confirm   |    mensaje |
