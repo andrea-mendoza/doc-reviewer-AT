@@ -8,9 +8,9 @@ Feature: Ingresar al sistema
     Given yo estoy en la pagina de iniciar sesion        
 	When ingreso mi nombre de usuario  "<username>"
     And ingreso mi password "<password>"
-	And presiono el boton Ingresar
-	Then soy redirigido a la pagina de Mis documentos
-    And veo mi "<nombre> " "<apellido>" en la pantalla
+	And presiono el boton "Ingresar"
+	Then veo mi "<nombre>" "<apellido>" en la pantalla
+    
 
     Examples:
    | username  |  password  | nombre    |   apellido    |  
@@ -20,20 +20,21 @@ Feature: Ingresar al sistema
     Given yo estoy en la pagina de iniciar sesion        
 	When ingreso mi nombre de usuario  "<username>"
     And ingreso mi password "<password>"
-	And presiono el boton Ingresar
-	Then veo el mensaje "<mensaje>"
+	And presiono el boton "Ingresar"
+	Then veo el mensaje "Ingrese su contraseña"
 
     Examples:
-   | username  |  password  |   mensaje |
-   |   |        |     Ingrese su contraseña   |
+   | username  |  password  | 
+   |   |        |    
 
     Scenario Outline: Contraseña incorrecta
     Given yo estoy en la pagina de iniciar sesion        
 	When ingreso mi nombre de usuario  "<username>"
     And ingreso mi password "<password>"
-	And presiono el boton Ingresar
-	Then veo el mensaje "<mensaje>"
+	And presiono el boton "Ingresar"
+	Then veo el mensaje "Login o contraseña inválidos"
+
 
     Examples:
-   | username  |  password  |   mensaje |
-   |  Julia  |  julia123  |     Login o contraseña inválidos   |
+   | username  |  password  |  
+   |  Julia  |  julia123  |    

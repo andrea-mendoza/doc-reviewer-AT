@@ -1,27 +1,25 @@
 Given("yo estoy en la pagina de iniciar sesion") do
-    pending # Write code here that turns the phrase above into concrete actions
+  visit 'http://docs-academicos.herokuapp.com/users/sign_in'
+end
+  
+  When("ingreso mi nombre de usuario  {string}") do |username|
+    fill_in 'user_login', :with => username
   end
   
-  When("ingreso mi nombre de usuario  {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  When("ingreso mi password {string}") do |password|
+    fill_in 'user_password', :with => password
   end
   
-  When("ingreso mi password {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  When("presiono el boton {string}") do |boton|
+    click_button(boton)
   end
   
-  When("presiono el boton Ingresar") do
-    pending # Write code here that turns the phrase above into concrete actions
+  
+  Then("veo mi {string} {string} en la pantalla") do |nombre, apellido|
+    expect(page).to have_content(nombre+' '+ apellido )
+    sleep 3
   end
   
-  Then("soy redirigido a la pagina de Mis documentos") do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
-  
-  Then("veo mi {string} {string} en la pantalla") do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
-  
-  Then("veo el mensaje {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Then("veo el mensaje {string}") do |mensaje|
+    expect(page).to have_content(mensaje )
   end
