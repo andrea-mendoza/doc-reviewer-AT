@@ -15,11 +15,11 @@ Given("presiono el boton {string}") do |ingresar|
 end
 
 When("estoy en la pagina de eventos") do
-    pending # Write code here that turns the phrase above into concrete actions
+    page.current_url('http://docs-academicos.herokuapp.com/')
 end
 
-When("presiono el boton con el nombre {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+When("presiono el boton con el nombre {string}") do |nombre|
+    click_link nombre
 end
 
 When("presiono la opcion {string}") do |string|
