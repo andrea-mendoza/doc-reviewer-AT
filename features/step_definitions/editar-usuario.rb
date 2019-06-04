@@ -1,36 +1,3 @@
-
-
-# When("Ingreso {int} en el campo ci") do |ci|
-#     fill_in 'user[ci]', :with => ci
-# end
-  
-# When("Ingreso {string} en el campo Correo Electronico") do |email|
-#     fill_in 'user[email]', :with => email
-#   end
-
-  
-#   Then("El sistema muestra una alerta {string}") do |alerta|
-#     page.has_content?(alerta)
-#   end
-
-#   When("Ingresar {int} en el campo ci") do |int|
-#     pending # Write code here that turns the phrase above into concrete actions
-#   end
-  
-#   Then("El sistema muestra una alerta {string}") do |alerta|
-#     pending # Write code here that turns the phrase above into concrete actions
-#   end
-  
-#   When("Ingresar {string} en el campo Apellido") do |apellido|
-#     pending # Write code here that turns the phrase above into concrete actions
-#   end
-  
-#   When("Ingresar {int} en el campo telefono") do |telefono|
-#     pending # Write code here that turns the phrase above into concrete actions
-#   end
-  
-  
-
 Given("Visito la pagina principal") do
     visit 'http://docs-academicos.herokuapp.com/'
   end
@@ -55,13 +22,13 @@ Given("Visito la pagina principal") do
     click_link opcion
   end
   
-#   When("Ingresar {string} en el campo nombre") do |nombre|
-#     fill_in 'user[name]', :with => nombre
-#   end
+  When("Ingresar {string} en el campo nombre") do |nombre|
+    fill_in 'user[name]', :with => nombre
+  end
   
-#   When("Ingresar {string} en el campo apellido") do |apellido|
-#     fill_in 'user[lastname]', :with => apellido
-#   end
+  When("Ingresar {string} en el campo apellido") do |apellido|
+    fill_in 'user[lastname]', :with => apellido
+  end
   
   When("Presiono el boton {string}") do |editar|
     click_button(editar)
@@ -71,9 +38,9 @@ Given("Visito la pagina principal") do
     page.has_content?(mensaje)
   end
   
-#   Then("Se cambia el nombre de la parte superior por {string}") do |nombre|
-#     page.has_content?(nombre)
-#   end
+  Then("Se cambia el nombre de la parte superior por {string}") do |nombre|
+    page.has_content?(nombre)
+  end
 
 When("Ingresar {int} en el campo ci") do |ci|
     fill_in 'user[ci]', :with => ci
