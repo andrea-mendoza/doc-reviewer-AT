@@ -8,6 +8,7 @@ Feature: Editar datos del usuario
     And Ingresar "carito123" como contraseña
     And presiono el boton "Ingresar"
 
+  @login
   Scenario: Editar nombre y apellido del usuario       
     When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
@@ -18,7 +19,7 @@ Feature: Editar datos del usuario
     And Se cambia el nombre de la parte superior por "Carolina Andrea Villalobos Montaño"
 
   Scenario: Editar ci del usuario       
-    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Andrea Villalobos Montaño"
+    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingresar 234323 en el campo ci
     And Presiono el boton "Editar"
