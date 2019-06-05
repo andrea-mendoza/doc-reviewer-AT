@@ -23,16 +23,16 @@ When("presiono la opcion {string}") do |crear|
 end
 
 When("estoy en la pagina de nuevo evento y presiono en {string}") do |primer|
-  click_on(primer)
-  sleep 3
+  find('#event_form > div:nth-child(3) > div:nth-child(1) > div > input').click
 end
 
-When("presiono el boton de {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+When("selecciono {string}") do |primer|
+  xpath = '//*[@id="select-options-36924a73-f052-879f-b550-58be2e5741131"]'
+  find(:xpath, xpath).click
 end
 
 When("selecciono {string} en el campo de carrera") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+  find('#event_form > div:nth-child(4) > div:nth-child(2) > div > input').click
 end
 
 When("Ingresar {string} en el campo nombre del evento") do |string|

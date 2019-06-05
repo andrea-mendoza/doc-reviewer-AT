@@ -11,7 +11,8 @@ Feature: Crear un evento
     And presiono el boton "Ingresar"
     When estoy en la pagina de eventos y presiono el boton de "Eventos"
     And presiono la opcion "Crear evento"
-    When estoy en la pagina de nuevo evento y presiono en "Primer"
+    When estoy en la pagina de nuevo evento y presiono en "elegir el semestre"
+    And selecciono "primer"
     And presiono el boton de "Elige una carrera"
     And selecciono "Ingenieria de sistemas" en el campo de carrera
     And Ingresar "investigacion redes" en el campo nombre del evento
