@@ -18,13 +18,7 @@ When("ingreso la siguiente informacion en los campos requeridos") do |table|
     fill_in 'user_phone', :with => value
   when "Carrera:"
     find('#new_user > div:nth-child(7) > div > input').click
-    # page.find(:xpath, '//*[@id="select-options-e597527f-3f12-2166-f85d-210ca474702a1"]/span').click
-    # find('#select-options-e597527f-3f12-2166-f85d-210ca474702a1').click
-    
-    # find('#new_user > div:nth-child(7) > div > input').native.send_keys(:arrow_down)  
-    # find('#new_user > div:nth-child(7) > div > input').native.send_keys(:return)  
-
-    sleep 5
+    find('span', text: 'Ingeniería de Sistemas').click 
 	when "Correo:"
     fill_in 'user_email', :with => value
 	when "Contraseña:"

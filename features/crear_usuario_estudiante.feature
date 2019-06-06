@@ -18,53 +18,53 @@ Feature: Crear cuenta de usuario
             |Repetir contraseña:| danivo123             |
         # Then estoy en la pagina de Mis Documentos y veo mi nombre "Daniela" "Vela" en la pantalla
 
-    Scenario: Campos en blanco
-        When ingreso la siguiente informacion en los campos requeridos
-            |Nombre: 	        |                   |
-            |Apellido: 	        |                   |
-            |Nombre de usuario: |                   |
-            |Ci: 	            |                   |
-            |Celular:           |                   |	
-            |Carrera: 	        |                   |
-            |Correo:            |                   | 	
-            |Contraseña: 	    |                   |
-            |Repetir contraseña:|                   |
-        And presiono el boton "Registrarse"
-        Then veo los mensajes 
-            |Nombre: 	            | El nombre no puede estar vacío                |
-            |Apellido: 	            | Los apellidos no pueden estar vacíos          |
-            |Nombre de usuario: 	| El nombre de usuario no puede estar vacío     |
-            |Carrera: 	            | Debe elegir una carrera                       |
-            |Contraseña: 	        | Ingrese su contraseña                         |
-            |Repetir contraseña:    | Repita su contraseña                          |
+    # Scenario: Campos en blanco
+    #     When ingreso la siguiente informacion en los campos requeridos
+    #         |Nombre: 	        |                   |
+    #         |Apellido: 	        |                   |
+    #         |Nombre de usuario: |                   |
+    #         |Ci: 	            |                   |
+    #         |Celular:           |                   |	
+    #         |Carrera: 	        |                   |
+    #         |Correo:            |                   | 	
+    #         |Contraseña: 	    |                   |
+    #         |Repetir contraseña:|                   |
+    #     And presiono el boton "Registrarse"
+    #     Then veo los mensajes 
+    #         |Nombre: 	            | El nombre no puede estar vacío                |
+    #         |Apellido: 	            | Los apellidos no pueden estar vacíos          |
+    #         |Nombre de usuario: 	| El nombre de usuario no puede estar vacío     |
+    #         |Carrera: 	            | Debe elegir una carrera                       |
+    #         |Contraseña: 	        | Ingrese su contraseña                         |
+    #         |Repetir contraseña:    | Repita su contraseña                          |
     
 
 
-    Scenario: Correo usado previamente
-        When ingreso la siguiente informacion en los campos requeridos
-            |Nombre: 	        | Julia                     |
-            |Apellido: 	        | Gutierrez                 |
-            |Nombre de usuario: | julia1                    |
-            |Ci: 	            | 28910289                  |
-            |Celular:           | 78909876                  |	
-            |Carrera: 	        | Ingeniería de Sistemas    |
-            |Correo:            | juli@gmail.com            | 	
-            |Contraseña: 	    | julia123                  |
-            |Repetir contraseña:| julia123                  |
-        And presiono el boton "Registrarse"
-        Then veo el mensaje "Correo ya registrado" 
+    # Scenario: Correo usado previamente
+    #     When ingreso la siguiente informacion en los campos requeridos
+    #         |Nombre: 	        | Julia                     |
+    #         |Apellido: 	        | Gutierrez                 |
+    #         |Nombre de usuario: | julia1                    |
+    #         |Ci: 	            | 28910289                  |
+    #         |Celular:           | 78909876                  |	
+    #         |Carrera: 	        | Ingeniería de Sistemas    |
+    #         |Correo:            | juli@gmail.com            | 	
+    #         |Contraseña: 	    | julia123                  |
+    #         |Repetir contraseña:| julia123                  |
+    #     And presiono el boton "Registrarse"
+    #     Then veo el mensaje "Correo ya registrado" 
 
-    Scenario: Numero de celular con mas de 8 digitos
-        When ingreso la siguiente informacion en los campos requeridos
-            |Nombre: 	        | Julia                     |
-            |Apellido: 	        | Gutierrez                 |
-            |Nombre de usuario: | julia1                    |
-            |Ci: 	            | 28910289                  |
-            |Celular:           | 789099675775876           |	
-            |Carrera: 	        | Ingeniería de Sistemas    |
-            |Correo:            | juli@gmail.com            | 	
-            |Contraseña: 	    | julia123                  |
-            |Repetir contraseña:| julia123                  |
-        And presiono el boton "Registrarse"
-        Then veo el mensaje "El celular no puede tener más de 8 caracteres" 
+    # Scenario: Numero de celular con mas de 8 digitos
+    #     When ingreso la siguiente informacion en los campos requeridos
+    #         |Nombre: 	        | Julia                     |
+    #         |Apellido: 	        | Gutierrez                 |
+    #         |Nombre de usuario: | julia1                    |
+    #         |Ci: 	            | 28910289                  |
+    #         |Celular:           | 789099675775876           |	
+    #         |Carrera: 	        | Ingeniería de Sistemas    |
+    #         |Correo:            | juli@gmail.com            | 	
+    #         |Contraseña: 	    | julia123                  |
+    #         |Repetir contraseña:| julia123                  |
+    #     And presiono el boton "Registrarse"
+    #     Then veo el mensaje "El celular no puede tener más de 8 caracteres" 
 
