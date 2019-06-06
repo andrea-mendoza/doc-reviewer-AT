@@ -34,9 +34,7 @@ When("selecciono {string} en el campo de titulo") do |string|
 end
 
 When("selecciono {string} en el campo de carrera") do |string|
-  xpath = '//*[@id="event_form"]/div[2]/div[2]/div'
-  find(:xpath, xpath).click
-  select(value, :from => 'Ingeniería Mecatrónica')
+  pending # Write code here that turns the phrase above into concrete actions
 end
 
 When("ingresar {string} en el campo nombre del evento") do |string|
@@ -44,10 +42,15 @@ When("ingresar {string} en el campo nombre del evento") do |string|
 end
 
 When("selecciono {string} en el campo fecha limite") do |string|
+  sleep 8
   xpath = '//*[@id="event_form"]/div[3]/label'
   find(:xpath, xpath).click
+  sleep 8
   xpath = '//*[@id="modal-c006dbfb-4fdd-9ef6-6e67-20ebc9eec9c4"]/div/div[2]/div[1]/div[2]/table/tbody/tr[3]/td[4]'
+  sleep 10
   find(:xpath, xpath).click
+  sleep 10
+
 end
 
 When("Presiono el boton {string}") do |string|
