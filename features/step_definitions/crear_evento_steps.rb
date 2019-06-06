@@ -2,11 +2,11 @@ Given("Visito la pagina principal") do
   visit 'http://docs-academicos.herokuapp.com/'
 end
 
-Given("Ingresar {string} como usuario") do |username|
+Given("Ingreso con mi usuario {string}") do |username|
   fill_in 'user[login]', :with => username
 end
 
-Given("Ingresar {string} como contraseña") do |password|
+Given("Ingreso con mi contraseña {string}") do |password|
   fill_in 'user[password]', :with => password
 end
 
@@ -14,7 +14,11 @@ Given("presiono el boton {string}") do |ingresar|
   click_button(ingresar)
 end
 
-When("estoy en la pagina de eventos y presiono el boton de {string}") do |eventos|
+When("estoy en la pagina de eventos") do
+  expect(page).to have_content('Eventos')
+end
+
+When("presiono el boton con el nombre {string}") do |eventos|
   click_on eventos
 end
 
@@ -22,41 +26,31 @@ When("presiono la opcion {string}") do |crear|
   click_on crear
 end
 
-When("estoy en la pagina de nuevo evento") do
-  expect(page).to have_content("Nuevo Evento")
+When("Ingreso los siguientes campos") do |table|
+  data = table.rows_hash
+  data.each_pair do |key, value|
+    case key
+    when "Semestre:"
+      find('#event_form > div:nth-child(3) > div:nth-child(1) > div > input').click
+      find('span', text: 'Primer').click
+    when "Nombre del evento:"
+      fill_in 'event_name', :with => value
+    when "Carrera:"
+      find('#event_form > div:nth-child(4) > div:nth-child(2) > div > input').click
+      find('span', text: 'Ingeniería de Sistemas').click
+    when "Fecha límite de recepción de documentos:"
+      find('#event_form > div.input-field > label').click
+      find('button', text: '12').click
+      xpath = '//*[@id="modal-26905384-a6a6-7b33-9928-075a55def6d8"]/div/div[2]/div[2]/div/button[2]'
+      find(:xpath, xpath).click
+    end
+  end
 end
 
-When("selecciono {string} en el campo de titulo") do |string|
-  #xpath = '//*[@id="event_form"]/div[1]/div[1]/div'
-  #find(:xpath, xpath).click
-  #xpath = '//*[@id="select-options-1ad973db-6822-4d7f-4b0a-9e5d554017f32"]'
-  #find(:xpath, xpath).click
+When("Presiono el boton {string}") do |registrar|
+  click_button(registrar)
 end
 
-When("selecciono {string} en el campo de carrera") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-When("ingresar {string} en el campo nombre del evento") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-When("selecciono {string} en el campo fecha limite") do |string|
-  sleep 8
-  xpath = '//*[@id="event_form"]/div[3]/label'
-  find(:xpath, xpath).click
-  sleep 8
-  xpath = '//*[@id="modal-c006dbfb-4fdd-9ef6-6e67-20ebc9eec9c4"]/div/div[2]/div[1]/div[2]/table/tbody/tr[3]/td[4]'
-  sleep 10
-  find(:xpath, xpath).click
-  sleep 10
-
-end
-
-When("Presiono el boton {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then("El sistema muestra la lista de eventos") do
-  pending # Write code here that turns the phrase above into concrete actions
+Then("El sistema muestra la pagina de eventos") do
+  expect(page).to have_content('Eventos')
 end
