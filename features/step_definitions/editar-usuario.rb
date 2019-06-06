@@ -49,7 +49,6 @@ When("Ingresar {int} en el campo ci") do |ci|
     fill_in 'user[ci]', :with => ci
   end
   
-
   When("Ingreso {string} en el campo Correo Electronico") do |email|
     fill_in 'user[email]', :with => email
   end

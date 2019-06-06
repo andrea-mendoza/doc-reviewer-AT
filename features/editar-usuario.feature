@@ -18,12 +18,17 @@ Feature: Editar datos del usuario
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
     And Se cambia el nombre de la parte superior por "Carolina Andrea Villalobos Montaño"
 
-  Scenario: Editar ci del usuario       
+  Scenario Outline: Editar ci del usuario       
     When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
-    And Ingresar 234323 en el campo ci
+    And Ingresar <ci> en el campo ci
     And Presiono el boton "Editar"
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
+
+    Examples:
+        | ci               | 
+        |   567645         |  
+        |      0           |  
 
   Scenario: Editar email del usuario    
     When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
@@ -54,8 +59,8 @@ Feature: Editar datos del usuario
 
    Examples:
         | celular               | mensaje                                         | 
-        |   78576378            |  Tu cuenta se ha actualizado                   |
-        |  786957463            |  El celular no puede tener más de 8 caracteres |	  
+        |   78576378            |  Tu cuenta se ha actualizado                    |
+        |  786957463            |  El celular no puede tener más de 8 caracteres  |	  
 
 
   # Scenario: Editar nombre invalido del usuario       
