@@ -7,7 +7,6 @@ Given("Visito la pagina principal") do
     fill_in 'user[password]', :with => ENV['DPWS']
   end
   
-  
   Given("presiono el boton {string}") do |ingresar|
     click_button(ingresar)
   end
@@ -19,13 +18,17 @@ Given("Visito la pagina principal") do
   When("presiono la opcion {string}") do |opcion|
     click_link opcion
   end
-  
-  When("Ingresar {string} en el campo nombre") do |nombre|
-    fill_in 'user[name]', :with => nombre
-  end
-  
-  When("Ingresar {string} en el campo apellido") do |apellido|
-    fill_in 'user[lastname]', :with => apellido
+
+  When("Ingreso los siguientes campos") do |table|
+    data = table.rows_hash
+    data.each_pair do |key, value|
+      case key
+        when "Nombre:"
+          fill_in 'user[name]', :with => value
+        when "Apellido:"
+          fill_in 'user[lastname]', :with => value
+      end
+    end
   end
   
   When("Presiono el boton {string}") do |editar|
@@ -34,10 +37,12 @@ Given("Visito la pagina principal") do
   
   Then("El sistema muestra el mensaje {string}") do |mensaje|
     page.has_content?(mensaje)
+    expect(page).to have_content(mensaje)
   end
   
   Then("Se cambia el nombre de la parte superior por {string}") do |nombre|
     page.has_content?(nombre)
+    expect(page).to have_content(nombre)
   end
 
 When("Ingresar {int} en el campo ci") do |ci|

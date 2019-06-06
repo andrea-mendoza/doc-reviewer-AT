@@ -14,8 +14,8 @@ After '@login' do
   fill_in 'user[name]', :with => 'Carolina'
   fill_in 'user[lastname]', :with => 'Villalobos'
   click_button('Editar')
-  click_link 'Carolina Villalobos'
-  click_link 'Salir'
+  # click_link 'Carolina Villalobos'
+  # click_link 'Salir'
 end
 
 
