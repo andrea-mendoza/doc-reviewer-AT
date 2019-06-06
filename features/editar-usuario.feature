@@ -63,16 +63,16 @@ Feature: Editar datos del usuario
         |  786957463            |  El celular no puede tener más de 8 caracteres  |	  
 
 
-  # Scenario: Editar nombre invalido del usuario       
-  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
-  #   And presiono la opcion "Modificar mis datos"
-  #   And Ingresar "" en el campo nombre
-  #   And Presiono el boton "Editar"
-  #   Then El sistema muestra una alerta "El nombre no puede estar vacío"
+  Scenario: Editar nombre invalido del usuario       
+    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
+    And presiono la opcion "Modificar mis datos"
+    And Ingresar "" en el campo Nombre
+    And Presiono el boton "Editar"
+    Then El sistema muestra una alerta "El nombre no puede estar vacío"
 
-  # Scenario: Editar apellido invalido del usuario       
-  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
-  #   And presiono la opcion "Modificar mis datos"
-  #   And Ingresar "" en el campo Apellido
-  #   And Presiono el boton "Editar"
-  #   Then El sistema muestra una alerta "El apellido no puede estar vacío"
+  Scenario: Editar apellido invalido del usuario       
+    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
+    And presiono la opcion "Modificar mis datos"
+    And Ingresar "" en el campo Apellido
+    And Presiono el boton "Editar"
+    Then El sistema muestra una alerta "Los apellidos no pueden estar vacíos"

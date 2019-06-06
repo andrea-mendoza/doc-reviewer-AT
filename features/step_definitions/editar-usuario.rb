@@ -61,5 +61,10 @@ When("Ingresar {int} en el campo ci") do |ci|
     fill_in 'user[phone]', :with => celular
   end
   
-
+  When("Ingresar {string} en el campo Nombre") do |nombre|
+    fill_in 'user[name]', :with => nombre
+  end
   
+  When("Ingresar {string} en el campo Apellido") do |apellido|
+    fill_in 'user[lastname]', :with => apellido
+  end
