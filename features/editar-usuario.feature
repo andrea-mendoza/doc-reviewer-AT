@@ -4,8 +4,7 @@ Feature: Editar datos del usuario
         Para matener mis datos actualizados
   Background:
     Given Visito la pagina principal
-    And Ingresar "carito" como usuario
-    And Ingresar "carito123" como contraseña
+    And Ingreso con mi usuario y contraseña
     And presiono el boton "Ingresar"
 
   @login
@@ -26,7 +25,7 @@ Feature: Editar datos del usuario
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
 
   # Scenario: Editar email invalido     
-  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Andrea Villalobos Montaño"
+  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
   #   And presiono la opcion "Modificar mis datos"
   #   And Ingresar " " en el campo Correo Electronico
   #   And Presiono el boton "Editar"
@@ -47,7 +46,7 @@ Feature: Editar datos del usuario
   #   Then El sistema muestra una alerta "El apellido no puede estar vacío"
 
   # Scenario: Editar email del usuario    
-  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Andrea Villalobos Montaño"
+  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
   #   And presiono la opcion "Modificar mis datos"
   #   And Ingresar "carolina@gmail.com" en el campo Correo Electronico
   #   And Presiono el boton "Editar"
@@ -55,7 +54,7 @@ Feature: Editar datos del usuario
 
 
   # Scenario: Editar telefono del usuario con datos invalidos   
-  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Andrea Villalobos Montaño"
+  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
   #   And presiono la opcion "Modificar mis datos"
   #   And Ingresar 12312731242 en el campo telefono
   #   And Presiono el boton "Editar"
@@ -63,7 +62,7 @@ Feature: Editar datos del usuario
 
 
   # Scenario: Editar telefono del usuario con datos invalidos   
-  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Andrea Villalobos Montaño"
+  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
   #   And presiono la opcion "Modificar mis datos"
   #   And Ingresar 12312731242 en el campo telefono
   #   And Presiono el boton "Editar"

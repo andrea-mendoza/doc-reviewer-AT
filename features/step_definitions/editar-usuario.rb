@@ -2,13 +2,11 @@ Given("Visito la pagina principal") do
     visit 'http://docs-academicos.herokuapp.com/'
   end
   
-  Given("Ingresar {string} como usuario") do |username|
-    fill_in 'user[login]', :with => username
+  Given("Ingreso con mi usuario y contraseña") do
+    fill_in 'user[login]', :with => ENV['DOC']
+    fill_in 'user[password]', :with => ENV['DPWS']
   end
   
-  Given("Ingresar {string} como contraseña") do |password|
-    fill_in 'user[password]', :with => password
-  end
   
   Given("presiono el boton {string}") do |ingresar|
     click_button(ingresar)
