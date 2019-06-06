@@ -58,4 +58,9 @@ When("Ingresar {int} en el campo ci") do |ci|
     expect(page).to have_content(alerta)
   end
 
+  When("Ingreso {int} en el campo celular") do |celular|
+    fill_in 'user[phone]', :with => celular
+  end
+  
+
   

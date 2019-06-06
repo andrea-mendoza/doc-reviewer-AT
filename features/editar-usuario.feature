@@ -25,6 +25,13 @@ Feature: Editar datos del usuario
     And Presiono el boton "Editar"
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
 
+  Scenario: Editar email del usuario    
+    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
+    And presiono la opcion "Modificar mis datos"
+    And Ingreso "carolina@gmail.com" en el campo Correo Electronico
+    And Presiono el boton "Editar"
+    Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
+
   Scenario Outline: Editar email invalido     
     When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
@@ -37,6 +44,19 @@ Feature: Editar datos del usuario
         |  c                  |  El correo no puede estar vacío |
         |  carito@            |  El correo no puede estar vacío |	  
         |  carito@gmail       |  Ocurrió un error al tratar de guardar usuario |
+
+  Scenario Outline: Editar telefono del usuario 
+    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
+    And presiono la opcion "Modificar mis datos"
+    And Ingreso <celular> en el campo celular
+    And Presiono el boton "Editar"
+    Then El sistema muestra el mensaje "<mensaje>"
+
+   Examples:
+        | celular               | mensaje                                         | 
+        |   78576378            |  Tu cuenta se ha actualizado                   |
+        |  786957463            |  El celular no puede tener más de 8 caracteres |	  
+
 
   # Scenario: Editar nombre invalido del usuario       
   #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
@@ -51,26 +71,3 @@ Feature: Editar datos del usuario
   #   And Ingresar "" en el campo Apellido
   #   And Presiono el boton "Editar"
   #   Then El sistema muestra una alerta "El apellido no puede estar vacío"
-
-  # Scenario: Editar email del usuario    
-  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
-  #   And presiono la opcion "Modificar mis datos"
-  #   And Ingresar "carolina@gmail.com" en el campo Correo Electronico
-  #   And Presiono el boton "Editar"
-  #   Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
-
-
-  # Scenario: Editar telefono del usuario con datos invalidos   
-  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
-  #   And presiono la opcion "Modificar mis datos"
-  #   And Ingresar 12312731242 en el campo telefono
-  #   And Presiono el boton "Editar"
-  #   Then El sistema muestra el mensaje "El celular no puede tener más de 8 caracteres"
-
-
-  # Scenario: Editar telefono del usuario con datos invalidos   
-  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
-  #   And presiono la opcion "Modificar mis datos"
-  #   And Ingresar 12312731242 en el campo telefono
-  #   And Presiono el boton "Editar"
-  #   Then El sistema muestra el mensaje "El celular no puede tener más de 8 caracteres"
