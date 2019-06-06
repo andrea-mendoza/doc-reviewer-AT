@@ -4,9 +4,9 @@ require 'capybara/dsl'
 require 'capybara/cucumber'
 require 'capybara-screenshot/cucumber'
 
-#PTravel Settings
-ENV['STUDENT']="carito"
-ENV['SPSW']="carito123"
+#Docente(Carolina)
+ENV['DOC']="carito"
+ENV['DPWS']="carito123"
 
 
 Capybara.default_driver = :selenium

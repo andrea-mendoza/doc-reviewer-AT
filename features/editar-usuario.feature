@@ -59,7 +59,7 @@ Feature: Editar datos del usuario
   #   And presiono la opcion "Modificar mis datos"
   #   And Ingresar 12312731242 en el campo telefono
   #   And Presiono el boton "Editar"
-  #   Then El sistema muestra el mensaje "El numero de telefono debe tener hasta 8 digitos"
+  #   Then El sistema muestra el mensaje "El celular no puede tener más de 8 caracteres"
 
 
   # Scenario: Editar telefono del usuario con datos invalidos   
@@ -67,4 +67,4 @@ Feature: Editar datos del usuario
   #   And presiono la opcion "Modificar mis datos"
   #   And Ingresar 12312731242 en el campo telefono
   #   And Presiono el boton "Editar"
-  #   Then El sistema muestra el mensaje "El numero de telefono debe tener hasta 8 digitos"
+  #   Then El sistema muestra el mensaje "El celular no puede tener más de 8 caracteres"
