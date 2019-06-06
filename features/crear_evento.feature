@@ -18,7 +18,6 @@ Feature: Crear un evento
       |Nombre del evento: | calidad|
       |Carrera: | Ingeniería en Sistemas|
       |Fecha límite de recepción de documentos:| 2019-06-12 |
-      |button:| Aceptar |
 
     And Presiono el boton "Registrar evento"
     Then El sistema muestra la pagina de eventos

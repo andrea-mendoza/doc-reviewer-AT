@@ -4,52 +4,6 @@
     <list default="true" id="5b486b91-7636-4fff-a58c-4eee01a9db9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/features/crear_evento.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/crear_evento.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/step_definitions/crear_evento_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/crear_evento_steps.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-21-58-40.168.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-21-58-40.168.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-00-04.287.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-00-04.287.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-00-32.767.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-00-32.767.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-01-12.798.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-01-12.798.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-06-01.751.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-06-01.751.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-09-21.077.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-09-21.077.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-25-15.806.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-25-15.806.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-27-35.925.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-27-35.925.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-29-08.508.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-29-08.508.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-33-10.274.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-33-10.274.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-48-28.934.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-48-28.934.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-49-39.573.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-49-39.573.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-51-05.608.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-51-05.608.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-52-18.753.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-22-52-18.753.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-03-19.366.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-03-19.366.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-04-31.658.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-04-31.658.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-05-49.136.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-05-49.136.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-07-06.282.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-07-06.282.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-08-47.388.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-08-47.388.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-10-24.445.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-10-24.445.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-12-08.982.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-12-08.982.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-13-32.676.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-05-23-13-32.676.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-06-07-36-37.957.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot_2019-06-06-07-36-37.957.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/features/crear_evento.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="61" />
+              <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -71,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/step_definitions/crear_evento_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="43" column="100" selection-start-line="43" selection-start-column="100" selection-end-line="43" selection-end-column="100" />
+            <state relative-caret-position="185">
+              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -113,9 +67,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1047" />
+    <option name="x" value="1046" />
     <option name="width" value="880" />
-    <option name="height" value="1039" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -195,13 +149,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54174000" />
+    <option name="totallyTimeSpent" value="54676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14697987" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3033557" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -278,14 +232,14 @@
     <entry file="file://$PROJECT_DIR$/features/crear_evento.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="61" />
+          <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/step_definitions/crear_evento_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="43" column="100" selection-start-line="43" selection-start-column="100" selection-end-line="43" selection-end-column="100" />
+        <state relative-caret-position="185">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
         </state>
       </provider>
     </entry>
