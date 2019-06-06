@@ -31,4 +31,10 @@ Given("Visito la pagina principal") do
     expect(page).to have_content(alerta)
   end
 
+  When("ingreso {string} en el campo titulo") do |titulo|
+    fill_in 'survey[name]', :with => titulo
+  end
   
+  Then("el sistema vuelve mostrar el formulario") do
+    pending # Write code here that turns the phrase above into concrete actions
+  end

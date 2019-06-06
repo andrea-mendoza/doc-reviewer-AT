@@ -16,20 +16,20 @@ Scenario: Crear un formulario de revision sin titulo
   Then el sistema muesta la alerta "El título no puede estar vacío"
 
 
-# Scenario: Crear un formulario de revision con un titulo corto
-#   When presiono el boton "Crear Form. Revision"
-#   And ingreso "Primer formulario" en el campo titulo
-#   And presiono el boton "Crear Formulario"
-#   Then el sistema muestra mensaje de confirmacion con el titulo "Confirmacion"
-#   And presiono el boton "Crear formulario"
-#   And el sistema vuelve mostrar el formulario
+Scenario: Crear un formulario de revision con un titulo corto
+  When presiono el icono Crear Form. Revision
+  And ingreso "Primer formulario" en el campo titulo
+  And presiono el link "Crear Formulario"
+  Then el sistema muestra mensaje de confirmacion con el titulo "Confirmación"
+  And presiono el boton "Crear formulario"
+  And el sistema vuelve mostrar el formulario
 
 # Scenario: Crear un formulario de revision sin puntaje
 #   When presiono el boton "Crear Form. Revision"
 #   And ingreso "formulario de taller" en el campo titulo
 #   And ingreso "Antecedentes" en el campo seccion
 #   And presiono el boton "Crear Formulario"
-#   Then el sistema muestra mensaje de confirmacion con el titulo "Confirmacion"
+#   Then el sistema muestra mensaje de confirmacion con el titulo "Confirmación"
 #   And presiono el boton "Crear formulario"
 #   And el sistema vuelve mostrar el formulario
 
@@ -39,7 +39,7 @@ Scenario: Crear un formulario de revision sin titulo
 #   And ingreso "Antecedentes" en el campo seccion
 #   And ingreso -123 en el campo puntaje maximo
 #   And presiono el boton "Crear Formulario"
-#   Then el sistema muestra mensaje de confirmacion con el titulo "Confirmacion"
+#   Then el sistema muestra mensaje de confirmacion con el titulo "Confirmación"
 #   And presiono el boton "Crear formulario"
 #   And el sistema vuelve mostrar el formulario
 
@@ -49,7 +49,7 @@ Scenario: Crear un formulario de revision sin titulo
 #   And ingreso "Antecedentes" en el campo seccion
 #   And ingreso 234 en el campo puntaje maximo
 #   And presiono el boton "Crear Formulario"
-#   Then el sistema muestra mensaje de confirmacion con el titulo "Confirmacion"
+#   Then el sistema muestra mensaje de confirmacion con el titulo "Confirmación"
 #   And presiono el boton "Crear formulario"
 #   And el sistema vuelve mostrar el formulario
 
@@ -61,7 +61,7 @@ Scenario: Crear un formulario de revision sin titulo
 #   And ingreso "Antedecedentes" en el campo seccion
 #   And ingreso "Descripcion de los antecedentes" en el campo descripcion
 #   And presiono el boton "Crear Formulario"
-#   Then el sistema muestra mensaje de confirmacion con el titulo "Confirmacion"
+#   Then el sistema muestra mensaje de confirmacion con el titulo "Confirmación"
 #   And presiono el boton "Crear formulario"
 #   And el sistema vuelve mostrar el formulario
 
