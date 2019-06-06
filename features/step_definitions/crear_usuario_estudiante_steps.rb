@@ -1,8 +1,8 @@
-Given("yo estoy en la pagina de registro") do
+Given("Visito la pagina de registro de usuarios") do
   visit 'http://docs-academicos.herokuapp.com/users/sign_up'
 end
 
-When("ingreso lo siguiente en los campos requeridos") do |table|
+When("ingreso la siguiente informacion en los campos requeridos") do |table|
   data = table.rows_hash
   data.each_pair do |key, value|
   case key
@@ -18,8 +18,13 @@ When("ingreso lo siguiente en los campos requeridos") do |table|
     fill_in 'user_phone', :with => value
   when "Carrera:"
     find('#new_user > div:nth-child(7) > div > input').click
-    find('#new_user > div:nth-child(7) > div > input').native.send_keys(:arrow_down)
-    find('#new_user > div:nth-child(7) > div > input').native.send_keys(:return)  
+    # page.find(:xpath, '//*[@id="select-options-e597527f-3f12-2166-f85d-210ca474702a1"]/span').click
+    # find('#select-options-e597527f-3f12-2166-f85d-210ca474702a1').click
+    
+    # find('#new_user > div:nth-child(7) > div > input').native.send_keys(:arrow_down)  
+    # find('#new_user > div:nth-child(7) > div > input').native.send_keys(:return)  
+
+    sleep 5
 	when "Correo:"
     fill_in 'user_email', :with => value
 	when "Contraseña:"

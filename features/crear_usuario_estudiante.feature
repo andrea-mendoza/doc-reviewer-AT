@@ -3,10 +3,10 @@ Feature: Crear cuenta de usuario
     Quiero crear mi cuenta de estudiante en el sistema de revisión de documentos académicos 
     Para poder tener un seguimiento en la revisión de mis documentos.
     Background:
-        Given yo estoy en la pagina de registro        
+        Given Visito la pagina de registro de usuarios    
 
     Scenario: Campos validos
-        When ingreso lo siguiente en los campos requeridos
+        When ingreso la siguiente informacion en los campos requeridos
             |Nombre: 	        | Daniela               |
             |Apellido: 	        | Vela                  |
             |Nombre de usuario: | danivo                |
@@ -16,11 +16,10 @@ Feature: Crear cuenta de usuario
             |Correo:            | daniela_vela@gmail.com| 	
             |Contraseña: 	    | danivo123             |
             |Repetir contraseña:| danivo123             |
-    
-        # Then veo mi nombre "<nombre> " "<apellido>" en la pantalla
+        # Then estoy en la pagina de Mis Documentos y veo mi nombre "Daniela" "Vela" en la pantalla
 
     Scenario: Campos en blanco
-        When ingreso lo siguiente en los campos requeridos
+        When ingreso la siguiente informacion en los campos requeridos
             |Nombre: 	        |                   |
             |Apellido: 	        |                   |
             |Nombre de usuario: |                   |
@@ -42,7 +41,7 @@ Feature: Crear cuenta de usuario
 
 
     Scenario: Correo usado previamente
-        When ingreso lo siguiente en los campos requeridos
+        When ingreso la siguiente informacion en los campos requeridos
             |Nombre: 	        | Julia                     |
             |Apellido: 	        | Gutierrez                 |
             |Nombre de usuario: | julia1                    |
@@ -55,10 +54,8 @@ Feature: Crear cuenta de usuario
         And presiono el boton "Registrarse"
         Then veo el mensaje "Correo ya registrado" 
 
-
-
     Scenario: Numero de celular con mas de 8 digitos
-        When ingreso lo siguiente en los campos requeridos
+        When ingreso la siguiente informacion en los campos requeridos
             |Nombre: 	        | Julia                     |
             |Apellido: 	        | Gutierrez                 |
             |Nombre de usuario: | julia1                    |
