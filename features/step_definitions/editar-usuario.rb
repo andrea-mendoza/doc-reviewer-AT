@@ -10,8 +10,12 @@ Given("Visito la pagina principal") do
   Given("presiono el boton {string}") do |ingresar|
     click_button(ingresar)
   end
+  When("estoy en la pagina de eventos") do
+    expect(page).to have_content('Eventos')
+    expect(page).to have_css('body > div > table')
+  end
   
-  When("estoy en la pagina de eventos y presiono el boton con el nombre {string}") do |nombre|
+  When("presiono el boton con el nombre {string}") do |nombre|
     click_link nombre
   end
   
@@ -45,7 +49,7 @@ Given("Visito la pagina principal") do
     expect(page).to have_content(nombre)
   end
 
-When("Ingresar {int} en el campo ci") do |ci|
+When("Ingreso {int} en el campo ci") do |ci|
     fill_in 'user[ci]', :with => ci
   end
   

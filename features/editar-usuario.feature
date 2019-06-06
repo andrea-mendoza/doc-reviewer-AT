@@ -9,7 +9,8 @@ Feature: Editar datos del usuario
 
   @login
   Scenario: Editar nombre y apellido del usuario       
-    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
+    When estoy en la pagina de eventos 
+    And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingreso los siguientes campos
     |Nombre: 	    | Carolina Andrea             |
@@ -18,27 +19,34 @@ Feature: Editar datos del usuario
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
     And Se cambia el nombre de la parte superior por "Carolina Andrea Villalobos Montaño"
 
-  Scenario Outline: Editar ci del usuario       
-    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
+  Scenario: Editar ci del usuario       
+    When estoy en la pagina de eventos 
+    And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
-    And Ingresar <ci> en el campo ci
+    And Ingreso 456736 en el campo ci
     And Presiono el boton "Editar"
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
 
-    Examples:
-        | ci               | 
-        |   567645         |  
-        |      0           |  
+    Scenario: Editar ci del usuario vacio      
+    When estoy en la pagina de eventos 
+    And presiono el boton con el nombre "Carolina Villalobos"
+    And presiono la opcion "Modificar mis datos"
+    And Ingreso 0 en el campo ci
+    And Presiono el boton "Editar"
+    Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
+
 
   Scenario: Editar email del usuario    
-    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
+    When estoy en la pagina de eventos 
+    And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingreso "carolina@gmail.com" en el campo Correo Electronico
     And Presiono el boton "Editar"
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
 
   Scenario Outline: Editar email invalido     
-    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
+    When estoy en la pagina de eventos 
+    And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingreso "<email>" en el campo Correo Electronico
     And Presiono el boton "Editar"
@@ -51,7 +59,8 @@ Feature: Editar datos del usuario
         |  carito@gmail       |  Ocurrió un error al tratar de guardar usuario |
 
   Scenario Outline: Editar telefono del usuario 
-    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
+    When estoy en la pagina de eventos 
+    And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingreso <celular> en el campo celular
     And Presiono el boton "Editar"
@@ -64,14 +73,16 @@ Feature: Editar datos del usuario
 
 
   Scenario: Editar nombre invalido del usuario       
-    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
+    When estoy en la pagina de eventos 
+    And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingresar "" en el campo Nombre
     And Presiono el boton "Editar"
     Then El sistema muestra una alerta "El nombre no puede estar vacío"
 
   Scenario: Editar apellido invalido del usuario       
-    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
+    When estoy en la pagina de eventos 
+    And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingresar "" en el campo Apellido
     And Presiono el boton "Editar"
