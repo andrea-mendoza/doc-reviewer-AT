@@ -3,38 +3,40 @@ Feature: Ingresar al sistema
     Como usuario 
     Quiero ingresar al sistema de revision de documentos 
     Para poder ver el progreso de revision de mis documentos.
- 
-  Scenario Outline: Campos validos
-    Given yo estoy en la pagina de iniciar sesion        
-	When ingreso mi nombre de usuario  "<username>"
-    And ingreso mi password "<password>"
-	And presiono el boton "Ingresar"
-	Then veo mi "<nombre>" "<apellido>" en la pantalla
-    
+     Background:
+         Given yo estoy en la pagina de iniciar sesion  
 
-    Examples:
-   | username  |  password  | nombre    |   apellido    |  
-   | Julia  |  julia1234      |  Julia   |   Gutierrez  | 
+  Scenario: Campos validos
+	 When ingreso lo siguiente en los campos requeridos
+            |Nombre de usuario o email: | Julia                |
+            |Contraseña: 	            | julia1234             |
+    And presiono el boton "Ingresar"
+	Then veo mi nombre "Julia" "Gutierrez" en la pantalla
 
-  Scenario Outline: Campos en blanco
-    Given yo estoy en la pagina de iniciar sesion        
-	When ingreso mi nombre de usuario  "<username>"
-    And ingreso mi password "<password>"
+  Scenario: Campos en blanco
+	When ingreso lo siguiente en los campos requeridos
+            |Nombre de usuario o email: |                 |
+            |Contraseña: 	            |              |
 	And presiono el boton "Ingresar"
 	Then veo el mensaje "Ingrese su contraseña"
 
-    Examples:
-   | username  |  password  | 
-   |   |        |    
+  
 
-    Scenario Outline: Contraseña incorrecta
+   Scenario: Contraseña incorrecta
     Given yo estoy en la pagina de iniciar sesion        
-	When ingreso mi nombre de usuario  "<username>"
-    And ingreso mi password "<password>"
+	When ingreso lo siguiente en los campos requeridos
+            |Nombre de usuario o email: |    Julia             |
+            |Contraseña: 	            |    julia123          |
 	And presiono el boton "Ingresar"
 	Then veo el mensaje "Login o contraseña inválidos"
 
 
-    Examples:
-   | username  |  password  |  
-   |  Julia  |  julia123  |    
+   Scenario: Nombre de usuario incorrecto
+    Given yo estoy en la pagina de iniciar sesion        
+	When ingreso lo siguiente en los campos requeridos
+            |Nombre de usuario o email: |    julia123             |
+            |Contraseña: 	            |    julia123          |
+	And presiono el boton "Ingresar"
+	Then veo el mensaje "Username/email o contraseña inválidos."
+
+
