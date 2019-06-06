@@ -25,18 +25,18 @@ Feature: Editar datos del usuario
     And Presiono el boton "Editar"
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
 
-  # Scenario Outline: Editar email invalido     
-  #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
-  #   And presiono la opcion "Modificar mis datos"
-  #   And Ingreso "<email>" en el campo Correo Electronico
-  #   And Presiono el boton "Editar"
-  #   Then El sistema muestra una alerta "<alerta>"
+  Scenario Outline: Editar email invalido     
+    When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"
+    And presiono la opcion "Modificar mis datos"
+    And Ingreso "<email>" en el campo Correo Electronico
+    And Presiono el boton "Editar"
+    Then El sistema muestra una alerta "<alerta>"
       
-  #   Examples:
-  #       | email               | alerta                          | 
-  #       |  c                  |  El correo no puede estar vacío |
-  #       |  carito@            |  El correo no puede estar vacío |	  
-  #       |  carito@gmail       |  Ocurrió un error al tratar de guardar usuario |
+    Examples:
+        | email               | alerta                          | 
+        |  c                  |  El correo no puede estar vacío |
+        |  carito@            |  El correo no puede estar vacío |	  
+        |  carito@gmail       |  Ocurrió un error al tratar de guardar usuario |
 
   # Scenario: Editar nombre invalido del usuario       
   #   When estoy en la pagina de eventos y presiono el boton con el nombre "Carolina Villalobos"

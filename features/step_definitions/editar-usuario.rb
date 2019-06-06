@@ -50,4 +50,12 @@ When("Ingresar {int} en el campo ci") do |ci|
   end
   
 
+  When("Ingreso {string} en el campo Correo Electronico") do |email|
+    fill_in 'user[email]', :with => email
+  end
+  
+  Then("El sistema muestra una alerta {string}") do |alerta|
+    expect(page).to have_content(alerta)
+  end
+
   
