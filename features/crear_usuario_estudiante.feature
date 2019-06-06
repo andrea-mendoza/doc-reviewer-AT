@@ -2,80 +2,72 @@ Feature: Crear cuenta de usuario
     Como estudiante 
     Quiero crear mi cuenta de estudiante en el sistema de revisión de documentos académicos 
     Para poder tener un seguimiento en la revisión de mis documentos.
-  Scenario Outline: Campos validos
-    Given yo estoy en la pagina de registro        
-	When ingreso mi  "<nombre>"
-    And ingreso mi apellido "<apellido>"
-    And ingreso mi nombre de usuario "<username>"
-    And ingreso mi ci "<ci>"
-    And ingreso mi celular "<celular>"
-    And selecciono mi carrera "<carrera>"
-    And ingreso mi correo electronico "<correo>"
-    And ingreso mi password "<password>"
-    And ingreso mi confirmacion para mi password "<password_confirm>"
-	# And presiono el boton "Registrarse"
-	# Then veo mi nombre "<nombre> " "<apellido>" en la pantalla
+    Background:
+        Given yo estoy en la pagina de registro        
 
-    Examples:
-   | nombre  |  apellido      |  username   |   ci  |  celular      |  carrera   |  correo  |  password      |  password_confirm   |
-   | Daniela  |  Vela      |  dani  |   28910289  |  78909876      |  Ingeniería de Sistemas   |  danita@gmail.com  |  danivo123      |  danivo123   |
+    Scenario: Campos validos
+        When ingreso lo siguiente en los campos requeridos
+            |Nombre: 	        | Daniela               |
+            |Apellido: 	        | Vela                  |
+            |Nombre de usuario: | danivo                |
+            |Ci: 	            | 121212                |
+            |Celular:           | 75848230              |	
+            |Carrera: 	        | Ingeniería en Sistemas|
+            |Correo:            | daniela_vela@gmail.com| 	
+            |Contraseña: 	    | danivo123             |
+            |Repetir contraseña:| danivo123             |
+    
+        # Then veo mi nombre "<nombre> " "<apellido>" en la pantalla
 
-  Scenario Outline: Campos en blanco
-    Given yo estoy en la pagina de registro        
-	When ingreso mi  "<nombre>"
-    And ingreso mi apellido "<apellido>"
-    And ingreso mi nombre de usuario "<username>"
-    And ingreso mi ci "<ci>"
-    And ingreso mi celular "<celular>"
-    And selecciono mi carrera "<carrera>"
-    And ingreso mi correo electronico "<correo>"
-    And ingreso mi password "<password>"
-    And ingreso mi confirmacion para mi password "<password_confirm>"
-	And presiono el boton "Registrarse"
-	Then veo el mensaje "El nombre no puede estar vacío" 
-	And veo el mensaje "Los apellidos no pueden estar vacíos" 
-	And veo el mensaje "El nombre de usuario no puede estar vacío" 
-	And veo el mensaje "Debe elegir una carrera" 
-	And veo el mensaje "Ingrese su contraseña" 
-	And veo el mensaje "Repita su contraseña" 
+    Scenario: Campos en blanco
+        When ingreso lo siguiente en los campos requeridos
+            |Nombre: 	        |                   |
+            |Apellido: 	        |                   |
+            |Nombre de usuario: |                   |
+            |Ci: 	            |                   |
+            |Celular:           |                   |	
+            |Carrera: 	        |                   |
+            |Correo:            |                   | 	
+            |Contraseña: 	    |                   |
+            |Repetir contraseña:|                   |
+        And presiono el boton "Registrarse"
+        Then veo los mensajes 
+            |Nombre: 	            | El nombre no puede estar vacío                |
+            |Apellido: 	            | Los apellidos no pueden estar vacíos          |
+            |Nombre de usuario: 	| El nombre de usuario no puede estar vacío     |
+            |Carrera: 	            | Debe elegir una carrera                       |
+            |Contraseña: 	        | Ingrese su contraseña                         |
+            |Repetir contraseña:    | Repita su contraseña                          |
+    
 
 
-    Examples:
-   | nombre  |  apellido      |  username   |   ci  |  celular      |  carrera   |  correo  |  password      |  password_confirm   |
-   |    |        |     |     |        |     |    |        |       |
+    Scenario: Correo usado previamente
+        When ingreso lo siguiente en los campos requeridos
+            |Nombre: 	        | Julia                     |
+            |Apellido: 	        | Gutierrez                 |
+            |Nombre de usuario: | julia1                    |
+            |Ci: 	            | 28910289                  |
+            |Celular:           | 78909876                  |	
+            |Carrera: 	        | Ingeniería de Sistemas    |
+            |Correo:            | juli@gmail.com            | 	
+            |Contraseña: 	    | julia123                  |
+            |Repetir contraseña:| julia123                  |
+        And presiono el boton "Registrarse"
+        Then veo el mensaje "Correo ya registrado" 
 
- Scenario Outline: Correo usado previamente
-    Given yo estoy en la pagina de registro        
-	When ingreso mi  "<nombre>"
-    And ingreso mi apellido "<apellido>"
-    And ingreso mi nombre de usuario "<username>"
-    And ingreso mi ci "<ci>"
-    And ingreso mi celular "<celular>"
-    And selecciono mi carrera "<carrera>"
-    And ingreso mi correo electronico "<correo>"
-    And ingreso mi password "<password>"
-    And ingreso mi confirmacion para mi password "<password_confirm>"
-	And presiono el boton "Registrarse"
-	Then veo el mensaje "Correo ya registrado" 
 
-    Examples:
-   | nombre  |  apellido      |  username   |   ci  |  celular      |  carrera   |  correo  |  password      |  password_confirm   |   
-   | Julia  |  Gutierrez      |  julia1   |   28910289  |  78909876      |  Sistemas   |  juli@gmail.com  |  julia123      |  julia123   | 
 
-Scenario Outline: Numero de celular con mas de 8 digitos
-    Given yo estoy en la pagina de registro        
-	When ingreso mi  "<nombre>"
-    And ingreso mi apellido "<apellido>"
-    And ingreso mi nombre de usuario "<username>"
-    And ingreso mi ci "<ci>"
-    And ingreso mi celular "<celular>"
-    And selecciono mi carrera "<carrera>"
-    And ingreso mi correo electronico "<correo>"
-    And ingreso mi password "<password>"
-    And ingreso mi confirmacion para mi password "<password_confirm>"
-	And presiono el boton "Registrarse"
-	Then veo el mensaje "El celular no puede tener más de 8 caracteres" 
+    Scenario: Numero de celular con mas de 8 digitos
+        When ingreso lo siguiente en los campos requeridos
+            |Nombre: 	        | Julia                     |
+            |Apellido: 	        | Gutierrez                 |
+            |Nombre de usuario: | julia1                    |
+            |Ci: 	            | 28910289                  |
+            |Celular:           | 789099675775876           |	
+            |Carrera: 	        | Ingeniería de Sistemas    |
+            |Correo:            | juli@gmail.com            | 	
+            |Contraseña: 	    | julia123                  |
+            |Repetir contraseña:| julia123                  |
+        And presiono el boton "Registrarse"
+        Then veo el mensaje "El celular no puede tener más de 8 caracteres" 
 
-    Examples:
-   | nombre  |  apellido      |  username   |   ci  |  celular      |  carrera   |  correo  |  password      |  password_confirm   |    mensaje |
-   | Julia  |  Gutierrez      |  julia1   |   28910289  |  789098212121276      |  Sistemas   |  julia123@gmail.com  |  julia123      |  julia123   |   El celular no puede tener más de 8 caracteres |   
