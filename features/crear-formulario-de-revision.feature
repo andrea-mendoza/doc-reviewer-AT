@@ -33,22 +33,22 @@ Scenario: Crear un formulario de revision sin puntaje
   And confirmo con el boton Crear formulario
   And el sistema vuelve mostrar el formulario
 
-# Scenario: Crear un formulario de revision con puntajes negativos 
-#   When presiono el boton "Crear Form. Revision"
-#   And ingreso "formulario de taller" en el campo titulo
-#   And ingreso "Antecedentes" en el campo seccion
-#   And ingreso -123 en el campo puntaje maximo
-#   And presiono el boton "Crear Formulario"
-#   Then el sistema muestra mensaje de confirmacion con el titulo "Confirmación"
-#   And confirmo con el boton Crear formulario
-#   And el sistema vuelve mostrar el formulario
+Scenario: Crear un formulario de revision con puntajes negativos 
+  When presiono el icono Crear Form. Revision
+  And ingreso "formulario de taller" en el campo titulo
+  And ingreso "Antecedentes" en el campo seccion
+  And ingreso -123 en el campo puntaje maximo
+  And presiono el link "Crear Formulario"
+  Then el sistema muestra mensaje de confirmacion con el titulo "Confirmación"
+  And confirmo con el boton Crear formulario
+  And el sistema vuelve mostrar el formulario
 
-# Scenario: Crear un formulario de revision con puntajes mayores a 100
-#   When presiono el boton "Crear Form. Revision" 
-#   And ingreso "formulario de taller" en el campo titulo
-#   And ingreso "Antecedentes" en el campo seccion
-#   And ingreso 234 en el campo puntaje maximo
-#   And presiono el boton "Crear Formulario"
-#   Then el sistema muestra mensaje de confirmacion con el titulo "Confirmación"
-#   And confirmo con el boton Crear formulario
-#   And el sistema vuelve mostrar el formulario
+Scenario: Crear un formulario de revision con puntajes mayores a 100
+  When presiono el icono Crear Form. Revision
+  And ingreso "formulario de taller" en el campo titulo
+  And ingreso "Antecedentes" en el campo seccion
+  And ingreso 234 en el campo puntaje maximo
+  And presiono el link "Crear Formulario"
+  Then el sistema muestra mensaje de confirmacion con el titulo "Confirmación"
+  And confirmo con el boton Crear formulario
+  And el sistema vuelve mostrar el formulario
