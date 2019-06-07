@@ -72,3 +72,17 @@ When("Ingreso {int} en el campo ci") do |ci|
   When("Ingresar {string} en el campo Apellido") do |apellido|
     fill_in 'user[lastname]', :with => apellido
   end
+
+  When("Ingreso los siguientes campos en el formulario") do |table|
+    data = table.rows_hash
+    data.each_pair do |key, value|
+      case key
+        when "Nueva Contraseña"
+          fill_in 'user[password]', :with => value
+        when "Repetir Nueva Contraseña"
+          fill_in 'user[password_confirmation]', :with => value
+        when "Contraseña Actual"
+          fill_in 'user[current_password]', :with => value
+      end
+    end
+  end
