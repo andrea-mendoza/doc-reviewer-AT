@@ -36,5 +36,6 @@ Given("Visito la pagina principal") do
   end
   
   Then("el sistema vuelve mostrar el formulario") do
-    pending # Write code here that turns the phrase above into concrete actions
+    expect(page).to have_content('Nuevo Formulario de Revisión')
+    expect(page).to have_content('La suma de los puntajes máximos debe ser 100')
   end
