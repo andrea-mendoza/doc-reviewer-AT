@@ -41,9 +41,8 @@ When("Ingreso los siguientes campos") do |table|
     when "Fecha límite de recepción de documentos:"
       find('#event_form > div.input-field > label').click
       find('button', text: '12').click
-      #find('#modal-f7b63f7b-f528-5809-6fb4-ab6f90044006 > div > div.datepicker-calendar-container > div.datepicker-footer > div > button.btn-flat.datepicker-done.waves-effect').click
-      #fill_in('button',text: 'Aceptar').native.send_keys(:return)
-      #find('button', text: 'Aceptar').click
+      click_button('Aceptar')
+     
     end
   end
 end
