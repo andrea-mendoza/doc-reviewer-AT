@@ -16,7 +16,7 @@ Feature: Crear cuenta de usuario
             |Correo:            | daniela_vela@gmail.com| 	
             |Contraseña: 	    | danivo123             |
             |Repetir contraseña:| danivo123             |
-        # And presiono el boton "Registrarse"
+        And presiono el boton "Registrarse"
         Then estoy en la pagina de Mis Documentos y veo mi nombre "Daniela" "Vela" en la pantalla
 
     Scenario: Campos en blanco
