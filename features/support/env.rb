@@ -8,6 +8,9 @@ require 'capybara-screenshot/cucumber'
 ENV['DOC']="carito"
 ENV['DPWS']="carito123"
 
+#Docente(Laura)
+ENV['DOCL']="laurita"
+ENV['DLPWS']="laura123"
 
 Capybara.default_driver = :selenium
 
