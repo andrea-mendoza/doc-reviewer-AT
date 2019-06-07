@@ -35,6 +35,10 @@ Given("Visito la pagina principal") do
     fill_in 'survey[name]', :with => titulo
   end
   
+  When("ingreso {string} en el campo seccion") do |mensaje|
+    fill_in 'survey[questions_attributes][0][title]', :with => mensaje
+  end
+
   Then("el sistema vuelve mostrar el formulario") do
     expect(page).to have_content('Nuevo Formulario de Revisión')
     expect(page).to have_content('La suma de los puntajes máximos debe ser 100')
