@@ -36,12 +36,12 @@ When("presiono el boton {string}") do |boton|
 end
 
 
-Then("veo mi nombre {string} {string} en la pantalla") do |nombre, apellido|
+Then("estoy en la pagina de Mis Documentos y veo mi nombre {string} {string} en la pantalla") do |nombre, apellido|
   expect(page).to have_content(nombre+' '+ apellido )
 end
 
 Then("veo el mensaje {string}") do |mensaje|
-  expect(page).to have_content(mensaje )
+  expect(page).to have_content(mensaje)
 end
 
 Then("veo los mensajes") do |table|
