@@ -4,7 +4,9 @@ require 'capybara/dsl'
 require 'capybara/cucumber'
 require 'capybara-screenshot/cucumber'
 
-
+#Docente(Carolina)
+ENV['DOC']="carito"
+ENV['DPWS']="carito123"
 
 #Docente(Laura)
 ENV['DOCL']="laurita"
@@ -13,8 +15,7 @@ ENV['DLPWS']="laura123"
 Capybara.default_driver = :selenium
 
 # Set the host the Capybara tests should be run against
-Capybara.app_host = ENV["CAPYBARA_HOST"]
-Capybara.server_port = 9515
+  Capybara.app_host = ENV["CAPYBARA_HOST"]
 
 # Set the time (in seconds) Capybara should wait for elements to appear on the page
 Capybara.default_max_wait_time = 15
@@ -29,9 +30,11 @@ class CapybaraDriverRegistrar
     end
   end
 end
+
+Capybara.server_host = '0.0.0.0'
 # Register various Selenium drivers
 #CapybaraDriverRegistrar.register_selenium_driver(:internet_explorer)
-#CapybaraDriverRegistrar.register_selenium_driver(:firefox)
+#CapybaraDriverRegistrar.register_selenium_driver(:chrome)
 CapybaraDriverRegistrar.register_selenium_driver(:chrome)
 Capybara.run_server = false
 #World(Capybara)
