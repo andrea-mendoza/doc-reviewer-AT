@@ -70,3 +70,7 @@ end
 Then("El sistema muestra una alerta {string}") do |alerta|
   expect(page).to have_content(alerta)
 end
+
+Then("El sistema muestra una alerta") do
+  find('#paper_pdf_file-error')
+end

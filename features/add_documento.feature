@@ -77,6 +77,35 @@ Feature: Agregar un documento
     And Presiono el boton "Registrar"
     Then El sistema muestra una alerta "Debe elegir su tipo de documento"
 
+  Scenario: agregar un documento sin cargar un documento
+    And presiono el boton con el nombre "trabajo practico"
+    When estoy en la pagina de documentos
+    And presiono la opcion "añadir"
+    And estoy en la pagina de Nuevo Documento
+    And Ingreso los siguientes campos
+      |Tipo de documento:| Pasantía|
+      |Título: | final|
+      |Link archivo Google Docs:|https://trello.com/b/KF6z7Id3/automatizacion|
+      |Resumen o Introducción:|dshshshshhshshshshshs|
+    And Presiono el boton "Registrar"
+    Then El sistema muestra una alerta
+
+  Scenario: agregar un documento sin cargar un documento
+    And presiono el boton con el nombre "trabajo practico"
+    When estoy en la pagina de documentos
+    And presiono la opcion "añadir"
+    And estoy en la pagina de Nuevo Documento
+    And Ingreso los siguientes campos
+      |Tipo de documento:| Pasantía|
+      |Título: | final|
+      |Link archivo Google Docs:|https://trello.com/b/KF6z7Id3/automatizacion|
+      |Resumen o Introducción:|dshshshshhshshshshshs|
+    And cargo "readme.txt" en el campo elija un archivo
+    And Presiono el boton "Registrar"
+    Then El sistema muestra una alerta
+
+
+
 
 
 
