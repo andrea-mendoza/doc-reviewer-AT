@@ -8,4 +8,3 @@ gem 'selenium-webdriver'
 gem 'capybara-screenshot' 
 gem 'sinatra'
 gem 'cucumber'
-
