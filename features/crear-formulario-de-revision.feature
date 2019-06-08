@@ -5,7 +5,7 @@ Feature: Creacion del formulario de revision
 
 Background:
     Given Visito la pagina principal
-    And Ingreso con mi usuario y contraseña
+    And Ingreso con mi usuario y contraseña de docente
     And presiono el boton "Ingresar"
 
 Scenario: Crear un formulario de revision sin titulo     

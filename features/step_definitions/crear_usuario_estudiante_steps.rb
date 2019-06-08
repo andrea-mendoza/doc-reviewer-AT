@@ -31,18 +31,11 @@ When("ingreso la siguiente informacion en los campos requeridos") do |table|
 end
 
 
-When("presiono el boton {string}") do |boton|
-  click_button(boton)
-end
-
 
 Then("estoy en la pagina de Mis Documentos y veo mi nombre {string} {string} en la pantalla") do |nombre, apellido|
   expect(page).to have_content(nombre+' '+ apellido )
 end
 
-Then("veo el mensaje {string}") do |mensaje|
-  expect(page).to have_content(mensaje)
-end
 
 Then("veo los mensajes") do |table|
   data = table.rows_hash

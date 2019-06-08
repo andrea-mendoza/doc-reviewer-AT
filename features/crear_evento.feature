@@ -9,54 +9,53 @@ Feature: Crear un evento
     And Ingreso con mi contraseña "laura123"
     And presiono el boton "Ingresar"
     When estoy en la pagina de eventos
-    And presiono el boton con el nombre "Eventos"
+    And Presiono el boton con el nombre "Eventos"
     And presiono la opcion "Crear evento"
 
   Scenario: crear un evento con datos validos
-    And Ingreso los siguientes campos
+    And Ingreso los siguientes campos de un evento
       |Semestre:| Primer|
       |Nombre del evento: | calidad|
       |Carrera: | Ingeniería en Sistemas|
       |Fecha límite de recepción de documentos:| 2019-06-12 |
 
-    And Presiono el boton "Registrar evento"
+    And presiono el boton "Registrar evento"
     Then El sistema muestra la pagina de eventos
 
   Scenario: crear un evento sin elegir semestre
-    And Ingreso los siguientes campos
+    And Ingreso los siguientes campos de un evento
       |Nombre del evento: | calidad|
       |Carrera: | Ingeniería en Sistemas|
       |Fecha límite de recepción de documentos:| 2019-06-12 |
 
-    And Presiono el boton "Registrar evento"
+    And presiono el boton "Registrar evento"
     Then El sistema muestra una alerta "Debe elegir un semestre"
 
   Scenario: crear un evento sin elegir una carrera
-    And Ingreso los siguientes campos
+    And Ingreso los siguientes campos de un evento
       |Semestre:| Primer|
       |Nombre del evento: | calidad|
       |Fecha límite de recepción de documentos:| 2019-06-12 |
-
-    And Presiono el boton "Registrar evento"
+    And presiono el boton "Registrar evento"
     Then El sistema muestra una alerta "Debe elegir la carrera"
 
   Scenario: crear un evento sin ingresar un nombre
-    And Ingreso los siguientes campos
+    And Ingreso los siguientes campos de un evento
       |Semestre:| Primer|
       |Carrera: | Ingeniería en Sistemas|
       |Fecha límite de recepción de documentos:| 2019-06-12 |
 
-    And Presiono el boton "Registrar evento"
+    And presiono el boton "Registrar evento"
     Then El sistema muestra una alerta "El nombre no puede estar vacío"
 
 
   Scenario: crear un evento sin seleccionar una fecha limite
-    And Ingreso los siguientes campos
+    And Ingreso los siguientes campos de un evento
       |Semestre:| Primer|
       |Nombre del evento: | calidad|
       |Carrera: | Ingeniería en Sistemas|
 
-    And Presiono el boton "Registrar evento"
+    And presiono el boton "Registrar evento"
     Then El sistema muestra una alerta "Debe elegir una fecha límite"
 
 
