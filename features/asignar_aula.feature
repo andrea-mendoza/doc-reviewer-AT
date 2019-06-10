@@ -12,11 +12,11 @@ Background:
 
 @onlyThis
 Scenario: asignar una aula con datos validos
-    And presiono el boton con el nombre "trabajo practico"
+    And presiono el boton trabajo practico
     When estoy en la pagina de documentos
-    And presiono la opcion "asignar aula"
+    And presiono la opcion Asignar aula
     And estoy en la pagina de Asignar Aula
-    And Ingreso los siguientes campos
+    And Ingreso los siguientes campos de un aula
     |Ambiente:| AP-3|
     |Fecha de la defensa: | 2019-06-12|
     |Hora de la defensa:|04:33 PM|
@@ -26,11 +26,11 @@ Scenario: asignar una aula con datos validos
 
 
 Scenario: asignar una aula sin ingresar un ambiente
-    And presiono el boton con el nombre "trabajo practico"
+    And presiono el boton trabajo practico
     When estoy en la pagina de documentos
-    And presiono la opcion "asignar aula"
+    And presiono la opcion Asignar aula
     And estoy en la pagina de Asignar Aula
-    And Ingreso los siguientes campos
+    And Ingreso los siguientes campos de un aula
     |Fecha de la defensa: | 2019-06-12|
     |Hora de la defensa:|04:33 PM|
 
@@ -38,11 +38,11 @@ Scenario: asignar una aula sin ingresar un ambiente
     Then El sistema muestra una alerta
 
 Scenario: asignar una aula sin seleccionar una fecha
-    And presiono el boton con el nombre "trabajo practico"
+    And presiono el boton trabajo practico
     When estoy en la pagina de documentos
-    And presiono la opcion "asignar aula"
+    And presiono la opcion Asignar aula
     And estoy en la pagina de Asignar Aula
-    And Ingreso los siguientes campos
+    And Ingreso los siguientes campos de un aula
     |Ambiente:| AP-3|
     |Hora de la defensa:|04:33 PM|
 
@@ -50,11 +50,11 @@ Scenario: asignar una aula sin seleccionar una fecha
     Then El sistema  muestra la lista de documentos
 
 Scenario: asignar una aula sin seleccionar la hora
-    And presiono el boton con el nombre "trabajo practico"
+    And presiono el boton trabajo practico
     When estoy en la pagina de documentos
-    And presiono la opcion "asignar aula"
+    And presiono la opcion Asignar aula
     And estoy en la pagina de Asignar Aula
-    And Ingreso los siguientes campos
+    And Ingreso los siguientes campos de un aula
     |Ambiente:| AP-3|
     |Fecha de la defensa: | 2019-06-12|
 

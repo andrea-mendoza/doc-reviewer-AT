@@ -1,24 +1,6 @@
-Given("Visito la pagina principal") do
-    visit 'http://docs-academicos.herokuapp.com/'
-  end
-  
-  Given("Ingreso con mi usuario {string}") do |username|
-    fill_in 'user[login]', :with => username
-  end
-  
-  Given("Ingreso con mi contraseña {string}") do |password|
-    fill_in 'user[password]', :with => password
-  end
-  
-  Given("presiono el boton {string}") do |ingresar|
-    click_button(ingresar)
-  end
-  
-  When("estoy en la pagina de eventos") do
-    expect(page).to have_content('Eventos')
-  end
-  
-  When("presiono el boton con el nombre {string}") do |string|
+
+
+  When("presiono el boton trabajo practico")  do
     find('a', text: 'trabajo practico').click
   end
   
@@ -26,16 +8,16 @@ Given("Visito la pagina principal") do
     expect(page).to have_content('Documentos')
   end
   
-  When("presiono la opcion {string}") do |string|
+  When("presiono la opcion Asignar aula") do 
     xpath = '/html/body/div[1]/table/tbody/tr[2]/td[6]/a'
     find(:xpath, xpath).click
   end
   
   When("estoy en la pagina de Asignar Aula") do
-    expect(page).to have_content('Asignar Aula')
+    expect(page).to have_content('Aula') 
   end
   
-  When("Ingreso los siguientes campos") do |table|
+  When("Ingreso los siguientes campos de un aula") do |table|
     data = table.rows_hash
   data.each_pair do |key, value|
     case key
