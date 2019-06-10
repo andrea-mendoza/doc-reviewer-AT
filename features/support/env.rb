@@ -12,6 +12,11 @@ ENV['DPWS']="carito123"
 ENV['DOCL']="laurita"
 ENV['DLPWS']="laura123"
 
+#Estudiante(Julia)
+ENV['EST']="Julia"
+ENV['ESTPW']="julia1234"
+
+
 Capybara.default_driver = :selenium
 
 # Set the host the Capybara tests should be run against
