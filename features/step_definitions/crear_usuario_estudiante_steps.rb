@@ -16,9 +16,10 @@ When("ingreso la siguiente informacion en los campos requeridos") do |table|
     fill_in 'user_ci', :with => value
   when "Celular:"
     fill_in 'user_phone', :with => value
-  when "Carrera:"
-    find('#new_user > div:nth-child(7) > div > input').click
-    find('span', text: 'Ingeniería de Sistemas').click 
+  when "Careera:"
+    find(:xpath, '/html/body/div/div/div/div/div/form/div[5]/div/input').click 
+    page.find('span', text: value).click
+
 	when "Correo:"
     fill_in 'user_email', :with => value
 	when "Contraseña:"
@@ -46,3 +47,8 @@ Then("veo los mensajes") do |table|
 	end
   end
 end
+
+Then("permanezco en la misma página de Crear Cuenta") do
+  page.has_text?('Crear cuenta')
+end
+
