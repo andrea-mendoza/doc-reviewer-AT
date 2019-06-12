@@ -4,6 +4,11 @@ require 'capybara/dsl'
 require 'capybara/cucumber'
 # require 'capybara-screenshot/cucumber'
 
+#Director de carrera(Ambiental)
+ENV['DIR']="luis"
+ENV['DIRPW']="luis1234"
+
+
 #Docente(Carolina)
 ENV['DOC']="carito"
 ENV['DPWS']="carito123"
