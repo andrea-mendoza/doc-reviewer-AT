@@ -37,9 +37,9 @@ Feature: Crear cuenta de usuario
         And presiono el boton "Crear usuario"
         Then El sistema me redirige a la página de Usuarios    
 
-     Scenario: Crear cuenta para docente
+     Scenario: Crear cuenta para un docente
          When presiono la opcion "Usuarios"
-         And presiono la opcion "Crea r usuario"
+         And presiono la opcion "Crear usuario"
          And ingreso la siguiente los datos del usuario en los campos requeridos
             |Nombre: 	        | Diana                |
             |Apellido: 	        | Rojas                |
@@ -51,3 +51,20 @@ Feature: Crear cuenta de usuario
             |Contraseña: 	    | diana123             |
         And presiono el boton "Crear usuario"
         Then El sistema me redirige a la página de Usuarios    
+
+     Scenario: Crear cuenta sin rol
+         When presiono la opcion "Usuarios"
+         And presiono la opcion "Crear usuario"
+         And ingreso la siguiente los datos del usuario en los campos requeridos
+            |Nombre: 	        | Diana                |
+            |Apellido: 	        | Rojas                |
+            |Nombre de usuario: | diana11              |
+            |Carrera: 	        | Ingeniería Ambiental |
+            |Celular:           | 75848230             |
+            |Rol:    	        |              |
+            |Correo electrónico:| diana1@gmail.com |  	
+            |Contraseña: 	    | diana123             |
+        And presiono el boton "Crear usuario"
+        Then permanezco en la misma página de Crear Cuenta
+        And deberia ver el mensaje de error "Debe seleccionar un rol válido."
+

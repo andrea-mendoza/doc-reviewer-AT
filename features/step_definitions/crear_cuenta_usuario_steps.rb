@@ -12,13 +12,13 @@ When("ingreso la siguiente informacion en los campos requeridos") do |table|
     fill_in 'user_lastname', :with => value
   when "Nombre de usuario:"
     fill_in 'user_username', :with => value
+  when "Carrera:"
+    find(:xpath, '//*[@id="new_user"]/div[5]/div/input').click 
+    page.find('span', text: value).click
   when "CI:"
     fill_in 'user_ci', :with => value
   when "Celular:"
     fill_in 'user_phone', :with => value
-  when "Careera:"
-    find(:xpath, '/html/body/div/div/div/div/div/form/div[5]/div/input').click 
-    page.find('span', text: value).click
 
 	when "Correo:"
     fill_in 'user_email', :with => value
@@ -52,3 +52,8 @@ Then("permanezco en la misma página de Crear Cuenta") do
   page.has_text?('Crear cuenta')
 end
 
+Then("deberia ver el mensaje de error {string}") do |mensaje|
+  if !page.has_content?(mensaje)
+    raise "ERROR should be: "+mensaje	
+  end
+end

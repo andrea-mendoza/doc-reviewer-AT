@@ -29,10 +29,8 @@ When("ingreso la siguiente los datos del usuario en los campos requeridos") do |
      
       end
     end
-
-
-
 end
+
 Then ("El sistema me redirige a la página de Usuarios") do
   expect(page).to have_content('Usuarios')
 end
