@@ -15,9 +15,6 @@ When("ingreso lo siguiente en los campos requeridos") do |table|
 end
 
 
-  When("presiono el boton {string}") do |boton|
-    click_button(boton)
-  end
   
   
   Then("veo mi nombre {string} {string} en la pantalla") do |nombre, apellido|
@@ -25,6 +22,4 @@ end
 
   end
   
-  Then("veo el mensaje {string}") do |mensaje|
-    expect(page).to have_content(mensaje )
-  end
+  

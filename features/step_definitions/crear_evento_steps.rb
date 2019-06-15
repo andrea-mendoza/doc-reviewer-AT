@@ -1,6 +1,4 @@
-Given("Visito la pagina principal") do
-  visit 'http://docs-academicos.herokuapp.com/'
-end
+
 
 Given("Ingreso con mi usuario {string}") do |username|
   fill_in 'user[login]', :with => username
@@ -10,23 +8,16 @@ Given("Ingreso con mi contraseña {string}") do |password|
   fill_in 'user[password]', :with => password
 end
 
-Given("presiono el boton {string}") do |ingresar|
-  click_button(ingresar)
-end
 
-When("estoy en la pagina de eventos") do
-  expect(page).to have_content('Eventos')
-end
-
-When("presiono el boton con el nombre {string}") do |eventos|
+When("Presiono el boton con el nombre {string}") do |eventos|
   click_on eventos
 end
 
-When("presiono la opcion {string}") do |crear|
-  click_on crear
-end
+# When("presiono la opcion {string}") do |crear|
+#   click_on crear
+# end
 
-When("Ingreso los siguientes campos") do |table|
+When("Ingreso los siguientes campos de un evento") do |table|
   data = table.rows_hash
   data.each_pair do |key, value|
     case key
@@ -47,14 +38,9 @@ When("Ingreso los siguientes campos") do |table|
   end
 end
 
-When("Presiono el boton {string}") do |registrar|
-  click_button(registrar)
-end
+
 
 Then("El sistema muestra la pagina de eventos") do
   expect(page).to have_content('Eventos')
 end
 
-Then("El sistema muestra una alerta {string}") do |alerta|
-  expect(page).to have_content(alerta)
-end

@@ -7,17 +7,17 @@ Feature: Crear cuenta de usuario
 
     Scenario: Campos validos
         When ingreso la siguiente informacion en los campos requeridos
-            |Nombre: 	        | Daniela               |
+            |Nombre: 	        | Dani               |
             |Apellido: 	        | Vela                  |
-            |Nombre de usuario: | danielavela                |
+            |Nombre de usuario: | danicita                |
+            |Carrera: 	        | Ingeniería en Sistemas|
             |Ci: 	            | 121212                |
             |Celular:           | 75848230              |	
-            |Carrera: 	        | Ingeniería en Sistemas|
-            |Correo:            | daniela_vela@gmail.com| 	
+            |Correo:            | dani_vel@gmail.com| 	
             |Contraseña: 	    | danivo123             |
             |Repetir contraseña:| danivo123             |
         And presiono el boton "Registrarse"
-        Then estoy en la pagina de Mis Documentos y veo mi nombre "Daniela" "Vela" en la pantalla
+        # Then estoy en la pagina de Mis Documentos y veo mi nombre "Daniela" "Vela" en la pantalla
 
     Scenario: Campos en blanco
         When ingreso la siguiente informacion en los campos requeridos
@@ -25,8 +25,8 @@ Feature: Crear cuenta de usuario
             |Apellido: 	        |                   |
             |Nombre de usuario: |                   |
             |Ci: 	            |                   |
-            |Celular:           |                   |	
             |Carrera: 	        |                   |
+            |Celular:           |                   |	
             |Correo:            |                   | 	
             |Contraseña: 	    |                   |
             |Repetir contraseña:|                   |
@@ -45,23 +45,25 @@ Feature: Crear cuenta de usuario
             |Nombre: 	        | Julia                     |
             |Apellido: 	        | Gutierrez                 |
             |Nombre de usuario: | julia1                    |
+            |Carrera: 	        | Ingeniería de Sistemas    |
             |Ci: 	            | 28910289                  |
             |Celular:           | 78909876                  |	
-            |Carrera: 	        | Ingeniería de Sistemas    |
             |Correo:            | juli@gmail.com            | 	
             |Contraseña: 	    | julia123                  |
             |Repetir contraseña:| julia123                  |
         And presiono el boton "Registrarse"
-        Then veo el mensaje "Correo ya registrado" 
+        Then permanezco en la misma página de Crear Cuenta 
+        And deberia ver el mensaje de error "El correo electrónico ya fue registrado con otra cuenta."
+
 
     Scenario: Numero de celular con mas de 8 digitos
         When ingreso la siguiente informacion en los campos requeridos
             |Nombre: 	        | Julia                     |
             |Apellido: 	        | Gutierrez                 |
             |Nombre de usuario: | julia1                    |
+            |Carrera: 	        | Ingeniería de Sistemas    |
             |Ci: 	            | 28910289                  |
             |Celular:           | 789099675775876           |	
-            |Carrera: 	        | Ingeniería de Sistemas    |
             |Correo:            | juli@gmail.com            | 	
             |Contraseña: 	    | julia123                  |
             |Repetir contraseña:| julia123                  |
@@ -73,37 +75,40 @@ Feature: Crear cuenta de usuario
             |Nombre: 	        | Julia                     |
             |Apellido: 	        | Gutierrez                 |
             |Nombre de usuario: | julia1                    |
+            |Carrera: 	        | Ingeniería de Sistemas    |
             |Ci: 	            | 28910289                  |
             |Celular:           | -789099675775876           |	
-            |Carrera: 	        | Ingeniería de Sistemas    |
             |Correo:            | juli2@gmail.com            | 	
             |Contraseña: 	    | julia123                  |
             |Repetir contraseña:| julia123                  |
         And presiono el boton "Registrarse"
-        Then veo el mensaje "El celular no puede ser un número negativo" 
-
+        Then permanezco en la misma página de Crear Cuenta 
+        And deberia ver el mensaje de error "El número de celular no puede ser negativo."
+        
   Scenario: CI negativo
         When ingreso la siguiente informacion en los campos requeridos
             |Nombre: 	        | Julia                     |
             |Apellido: 	        | Gutierrez                 |
             |Nombre de usuario: | julia1                    |
+            |Carrera: 	        | Ingeniería de Sistemas    |
             |Ci: 	            | -1294828910289                  |
             |Celular:           | 70077586           |	
-            |Carrera: 	        | Ingeniería de Sistemas    |
             |Correo:            | juli@gmail.com            | 	
             |Contraseña: 	    | julia123                  |
             |Repetir contraseña:| julia123                  |
         And presiono el boton "Registrarse"
-        Then veo el mensaje "El CI no puede ser un número negativo" 
+        Then permanezco en la misma página de Crear Cuenta
+        And deberia ver el mensaje de error "El CI no puede ser negativo."
+
 
  Scenario: Contraseñas diferentes
         When ingreso la siguiente informacion en los campos requeridos
             |Nombre: 	        | Julia                     |
             |Apellido: 	        | Gutierrez                 |
             |Nombre de usuario: | julia1                    |
+            |Carrera: 	        | Ingeniería de Sistemas    |
             |Ci: 	            | -1294828910289                  |
             |Celular:           | 70077586           |	
-            |Carrera: 	        | Ingeniería de Sistemas    |
             |Correo:            | juli@gmail.com            | 	
             |Contraseña: 	    | julia123                  |
             |Repetir contraseña:| julia1234789                  |
@@ -115,9 +120,9 @@ Feature: Crear cuenta de usuario
             |Nombre: 	        | Julia                     |
             |Apellido: 	        | Gutierrez                 |
             |Nombre de usuario: | julia1                    |
+            |Carrera: 	        | Ingeniería de Sistemas    |
             |Ci: 	            | -1294828910289                  |
             |Celular:           | 70077586           |	
-            |Carrera: 	        | Ingeniería de Sistemas    |
             |Correo:            | juli@gmail.com            | 	
             |Contraseña: 	    | 1234                  |
             |Repetir contraseña:| 1234                  |

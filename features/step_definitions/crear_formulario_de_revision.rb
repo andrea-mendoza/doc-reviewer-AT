@@ -1,15 +1,10 @@
-Given("Visito la pagina principal") do
-    visit 'http://docs-academicos.herokuapp.com/'
-  end
+
   
-  Given("Ingreso con mi usuario y contraseña") do
+  Given("Ingreso con mi usuario y contraseña de docente") do
     fill_in 'user[login]', :with => ENV['DOCL']
     fill_in 'user[password]', :with => ENV['DLPWS']
   end
   
-  Given("presiono el boton {string}") do |boton|
-    click_button(boton)
-  end
 
   When("presiono el icono Crear Form. Revision") do
     find('body > div.container > table > tbody > tr:nth-child(1) > td:nth-child(6) > a > i').click

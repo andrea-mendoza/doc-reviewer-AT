@@ -2,7 +2,12 @@ begin require 'rspec/expectations'; rescue LoadError; require 'spec/expectations
 require 'capybara'
 require 'capybara/dsl'
 require 'capybara/cucumber'
-require 'capybara-screenshot/cucumber'
+# require 'capybara-screenshot/cucumber'
+
+#Director de carrera(Ambiental)
+ENV['DIR']="luis"
+ENV['DIRPW']="luis1234"
+
 
 #Docente(Carolina)
 ENV['DOC']="carito"
@@ -11,6 +16,11 @@ ENV['DPWS']="carito123"
 #Docente(Laura)
 ENV['DOCL']="laurita"
 ENV['DLPWS']="laura123"
+
+#Estudiante(Julia)
+ENV['EST']="Julia"
+ENV['ESTPW']="julia1234"
+
 
 Capybara.default_driver = :selenium
 

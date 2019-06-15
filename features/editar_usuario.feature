@@ -15,7 +15,7 @@ Feature: Editar datos del usuario
     And Ingreso los siguientes campos
     |Nombre: 	    | Carolina Andrea             |
     |Apellido: 	  | Villalobos Montaño          |
-    And Presiono el boton "Editar"
+    And presiono el boton "Editar"
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
     And Se cambia el nombre de la parte superior por "Carolina Andrea Villalobos Montaño"
 
@@ -24,7 +24,7 @@ Feature: Editar datos del usuario
     And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingreso 456736 en el campo ci
-    And Presiono el boton "Editar"
+    And presiono el boton "Editar"
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
 
     Scenario: Editar ci del usuario vacio      
@@ -32,7 +32,7 @@ Feature: Editar datos del usuario
     And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingreso 0 en el campo ci
-    And Presiono el boton "Editar"
+    And presiono el boton "Editar"
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
 
 
@@ -41,7 +41,7 @@ Feature: Editar datos del usuario
     And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingreso "carolina@gmail.com" en el campo Correo Electronico
-    And Presiono el boton "Editar"
+    And presiono el boton "Editar"
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
 
   Scenario Outline: Editar email invalido     
@@ -49,7 +49,7 @@ Feature: Editar datos del usuario
     And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingreso "<email>" en el campo Correo Electronico
-    And Presiono el boton "Editar"
+    And presiono el boton "Editar"
     Then El sistema muestra una alerta "<alerta>"
       
     Examples:
@@ -63,7 +63,7 @@ Feature: Editar datos del usuario
     And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingreso 78576378 en el campo celular
-    And Presiono el boton "Editar"
+    And presiono el boton "Editar"
     Then El sistema muestra el mensaje "Tu cuenta se ha actualizado"
 
   Scenario: Editar telefono del usuario 
@@ -71,7 +71,7 @@ Feature: Editar datos del usuario
     And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingreso 786957463 en el campo celular
-    And Presiono el boton "Editar"
+    And presiono el boton "Editar"
     Then El sistema muestra una alerta "El celular no puede tener más de 8 caracteres" 
 
   Scenario: Editar nombre invalido del usuario       
@@ -79,7 +79,7 @@ Feature: Editar datos del usuario
     And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingresar "" en el campo Nombre
-    And Presiono el boton "Editar"
+    And presiono el boton "Editar"
     Then El sistema muestra una alerta "El nombre no puede estar vacío"
 
   Scenario: Editar apellido invalido del usuario       
@@ -87,7 +87,7 @@ Feature: Editar datos del usuario
     And presiono el boton con el nombre "Carolina Villalobos"
     And presiono la opcion "Modificar mis datos"
     And Ingresar "" en el campo Apellido
-    And Presiono el boton "Editar"
+    And presiono el boton "Editar"
     Then El sistema muestra una alerta "Los apellidos no pueden estar vacíos"
 
   @password
@@ -99,5 +99,5 @@ Feature: Editar datos del usuario
     |Nueva Contraseña 	       |  villalobos  |
     |Repetir Nueva Contraseña  |  villalobos  |
     |Contraseña Actual         |  carito123   |
-    And Presiono el boton "Cambiar contraseña"
+    And presiono el boton "Cambiar contraseña"
     Then El sistema muestra el mensaje "Se cambio la contraseña correctamente."
