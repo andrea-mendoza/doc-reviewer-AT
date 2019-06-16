@@ -27,7 +27,3 @@ definitions:
   caches:
     bundler: ./Gemfile
 
-
-branches:
- only:
-  - travis
