@@ -8,9 +8,9 @@ Feature: Agregar un documento
     And Ingreso con mi usuario "Julia"
     And Ingreso con mi contraseña "julia1234"
     And presiono el boton "Ingresar"
-    When estoy en la pagina de eventos
 @onlyThis
   Scenario: agregar un documento con datos validos
+   When estoy en la pagina de eventos
     And presiono el boton con el nombre de "trabajo practico"
     When estoy en la pagina de documentos
     And presiono en "añadir"
@@ -26,6 +26,7 @@ Feature: Agregar un documento
 
 
   Scenario: agregar un documento sin titulo
+   When estoy en la pagina de eventos
     And presiono el boton con el nombre de "trabajo practico"
     When estoy en la pagina de documentos
     And presiono en "añadir"
@@ -39,6 +40,7 @@ Feature: Agregar un documento
     Then El sistema muestra una alerta de "Campo obligatorio"
 
   Scenario: agregar un documento sin link
+   When estoy en la pagina de eventos
     And presiono el boton con el nombre de "trabajo practico"
     When estoy en la pagina de documentos
     And presiono en "añadir"
@@ -52,6 +54,7 @@ Feature: Agregar un documento
     Then El sistema muestra una alerta de "Campo obligatorio"
 
   Scenario: agregar un documento sin resumen
+   When estoy en la pagina de eventos
     And presiono el boton con el nombre de "trabajo practico"
     When estoy en la pagina de documentos
     And presiono en "añadir"
@@ -65,6 +68,7 @@ Feature: Agregar un documento
     Then El sistema  muestra la lista de documentos
 
   Scenario: agregar un documento sin seleccionar un tipo
+   When estoy en la pagina de eventos
     And presiono el boton con el nombre de "trabajo practico"
     When estoy en la pagina de documentos
     And presiono en "añadir"
@@ -78,6 +82,7 @@ Feature: Agregar un documento
     Then El sistema muestra una alerta de "Debe elegir su tipo de documento"
 
   Scenario: agregar un documento sin cargar un documento
+   When estoy en la pagina de eventos
     And presiono el boton con el nombre de "trabajo practico"
     When estoy en la pagina de documentos
     And presiono en "añadir"
@@ -91,6 +96,7 @@ Feature: Agregar un documento
     Then El sistema muestra una alerta en la pagina
 
   Scenario: agregar un documento sin cargar un documento
+   When estoy en la pagina de eventos
     And presiono el boton con el nombre de "trabajo practico"
     When estoy en la pagina de documentos
     And presiono en "añadir"

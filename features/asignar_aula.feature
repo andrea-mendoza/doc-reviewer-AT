@@ -8,10 +8,10 @@ Background:
     And Ingreso con mi usuario "laurita"
     And Ingreso con mi contraseña "laura123"
     And presiono el boton "Ingresar"
-    When estoy en la pagina de eventos
 
 
 Scenario: asignar una aula con datos validos
+    When estoy en la pagina de eventos
     And presiono la opcion con el nombre "trabajo practico"
     When estoy en la pagina de documentos
     And presiono la opcion de "asignar aula"
@@ -26,6 +26,7 @@ Scenario: asignar una aula con datos validos
     
 
 Scenario: asignar una aula sin ingresar un ambiente
+    When estoy en la pagina de eventos
     And presiono la opcion con el nombre "trabajo practico"
     When estoy en la pagina de documentos
     And presiono la opcion de "asignar aula"
@@ -38,6 +39,7 @@ Scenario: asignar una aula sin ingresar un ambiente
     Then El sistema muestra una alerta debajo del campo ambiente
 
 Scenario: asignar una aula sin seleccionar una fecha
+    When estoy en la pagina de eventos
     And presiono la opcion con el nombre "trabajo practico"
     When estoy en la pagina de documentos
     And presiono la opcion de "asignar aula"
@@ -51,6 +53,7 @@ Scenario: asignar una aula sin seleccionar una fecha
 
 @onlyThis
 Scenario: asignar una aula sin seleccionar la hora
+    When estoy en la pagina de eventos
     And presiono la opcion con el nombre "trabajo practico"
     When estoy en la pagina de documentos
     And presiono la opcion de "asignar aula"
